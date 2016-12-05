@@ -1,0 +1,1173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="cbpmqdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.AQ_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AQ_Record">
+          <Key>
+            <PropertyRef Name="file_date" />
+          </Key>
+          <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
+          <Property Name="surety_code" Type="nvarchar" MaxLength="3" />
+          <Property Name="bond_number" Type="nvarchar" MaxLength="9" />
+          <Property Name="bond_type" Type="tinyint" />
+          <Property Name="entry_type" Type="tinyint" />
+          <Property Name="release_summary_indicator" Type="tinyint" />
+          <Property Name="importer_of_record" Type="nvarchar" MaxLength="12" />
+          <Property Name="entry_source" Type="tinyint" />
+          <Property Name="release_date" Type="smalldatetime" />
+          <Property Name="value" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="broker_reference_number" Type="nvarchar" MaxLength="9" />
+          <Property Name="cancel_date" Type="smalldatetime" />
+          <Property Name="collection_status" Type="tinyint" />
+          <Property Name="district_port_of_entry2" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code2" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number2" Type="nvarchar" MaxLength="9" />
+          <Property Name="entry_date" Type="smalldatetime" />
+          <Property Name="record_status" Type="tinyint" />
+          <Property Name="accelerated_drawback_indicator" Type="nvarchar" MaxLength="1" />
+          <Property Name="possible_late_indicator" Type="tinyint" />
+          <Property Name="oga_indicator" Type="nvarchar" MaxLength="1" />
+          <Property Name="entry_summary_date" Type="smalldatetime" />
+          <Property Name="collection_date" Type="smalldatetime" />
+          <Property Name="warehouse_entry_summary_number" Type="nvarchar" MaxLength="11" />
+          <Property Name="tentative_tib_close_date_liquidation_date" Type="smalldatetime" />
+          <Property Name="estimated_duty" Type="money" />
+          <Property Name="estimated_taxes" Type="money" />
+          <Property Name="district_port_of_entry3" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code3" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number3" Type="nvarchar" MaxLength="9" />
+          <Property Name="estimated_fee" Type="money" />
+          <Property Name="estimated_antidumping_duty" Type="money" />
+          <Property Name="bonded_antidumping_duty" Type="money" />
+          <Property Name="estimated_countervailing_duty" Type="money" />
+          <Property Name="bonded_countervailing_duty" Type="money" />
+          <Property Name="recon_entry_nafta_issue_entry_type_09" Type="nvarchar" MaxLength="1" />
+          <Property Name="recon_entry_other_issue_entry_type_09" Type="nvarchar" MaxLength="3" />
+          <Property Name="pay_basis_indicator" Type="tinyint" />
+          <Property Name="filler3" Type="nvarchar" MaxLength="2" />
+          <Property Name="district_port_of_entry4" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code4" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number4" Type="nvarchar" MaxLength="9" />
+          <Property Name="nafta_reconciliation_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="nafta_reconciliation" Type="nvarchar" MaxLength="11" />
+          <Property Name="other_reconciliation_flag" Type="nvarchar" MaxLength="3" />
+          <Property Name="other_reconciliation_entry" Type="nvarchar" MaxLength="11" />
+          <Property Name="single_entry_bond_amount" Type="nvarchar" MaxLength="11" />
+          <Property Name="single_entry_bond_producer_account_number" Type="nvarchar" MaxLength="10" />
+          <Property Name="filler4" Type="nvarchar" MaxLength="16" />
+          <Property Name="district_port_of_entry5" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code5" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number5" Type="nvarchar" MaxLength="9" />
+          <Property Name="first_associated_import_entry" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_1" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_2" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_3" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_4" Type="nvarchar" MaxLength="11" />
+          <Property Name="filler5" Type="nvarchar" MaxLength="7" />
+          <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.AS_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AS_Record">
+          <Key>
+            <PropertyRef Name="file_date" />
+          </Key>
+          <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
+          <Property Name="surety_code" Type="nvarchar" MaxLength="3" />
+          <Property Name="bond_number" Type="nvarchar" MaxLength="9" />
+          <Property Name="bond_type" Type="tinyint" />
+          <Property Name="entry_type" Type="tinyint" />
+          <Property Name="release_summary_indicator" Type="tinyint" />
+          <Property Name="importer_of_record" Type="nvarchar" MaxLength="12" />
+          <Property Name="entry_source" Type="tinyint" />
+          <Property Name="release_date" Type="smalldatetime" />
+          <Property Name="value" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="broker_reference_number" Type="nvarchar" MaxLength="9" />
+          <Property Name="cancel_date" Type="smalldatetime" />
+          <Property Name="collection_status" Type="tinyint" />
+          <Property Name="district_port_of_entry2" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code2" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number2" Type="nvarchar" MaxLength="9" />
+          <Property Name="entry_date" Type="smalldatetime" />
+          <Property Name="record_status" Type="tinyint" />
+          <Property Name="accelerated_drawback_indicator" Type="nvarchar" MaxLength="1" />
+          <Property Name="possible_late_indicator" Type="tinyint" />
+          <Property Name="oga_indicator" Type="nvarchar" MaxLength="1" />
+          <Property Name="entry_summary_date" Type="smalldatetime" />
+          <Property Name="collection_date" Type="smalldatetime" />
+          <Property Name="warehouse_entry_summary_number" Type="nvarchar" MaxLength="11" />
+          <Property Name="tentative_tib_close_date_liquidation_date" Type="smalldatetime" />
+          <Property Name="estimated_duty" Type="money" />
+          <Property Name="estimated_taxes" Type="money" />
+          <Property Name="district_port_of_entry3" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code3" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number3" Type="nvarchar" MaxLength="9" />
+          <Property Name="estimated_fee" Type="money" />
+          <Property Name="estimated_antidumping_duty" Type="money" />
+          <Property Name="bonded_antidumping_duty" Type="money" />
+          <Property Name="estimated_countervailing_duty" Type="money" />
+          <Property Name="bonded_countervailing_duty" Type="money" />
+          <Property Name="recon_entry_nafta_issue_entry_type_09" Type="nvarchar" MaxLength="1" />
+          <Property Name="recon_entry_other_issue_entry_type_09" Type="nvarchar" MaxLength="3" />
+          <Property Name="pay_basis_indicator" Type="tinyint" />
+          <Property Name="filler3" Type="nvarchar" MaxLength="2" />
+          <Property Name="district_port_of_entry4" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code4" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number4" Type="nvarchar" MaxLength="9" />
+          <Property Name="nafta_reconciliation_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="nafta_reconciliation" Type="nvarchar" MaxLength="11" />
+          <Property Name="other_reconciliation_flag" Type="nvarchar" MaxLength="3" />
+          <Property Name="other_reconciliation_entry" Type="nvarchar" MaxLength="11" />
+          <Property Name="single_entry_bond_amount" Type="nvarchar" MaxLength="11" />
+          <Property Name="single_entry_bond_producer_account_number" Type="nvarchar" MaxLength="10" />
+          <Property Name="filler4" Type="nvarchar" MaxLength="16" />
+          <Property Name="district_port_of_entry5" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code5" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number5" Type="nvarchar" MaxLength="9" />
+          <Property Name="first_associated_import_entry" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_1" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_2" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_3" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_4" Type="nvarchar" MaxLength="11" />
+          <Property Name="filler5" Type="nvarchar" MaxLength="7" />
+          <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ASAQEmails">
+          <Key>
+            <PropertyRef Name="EmailID" />
+          </Key>
+          <Property Name="EmailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Importer" Type="varchar" MaxLength="50" />
+          <Property Name="BondNumber" Type="varchar" MaxLength="50" />
+          <Property Name="EffectiveDate" Type="date" />
+          <Property Name="EmailSentDate" Type="date" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="EntryDate" Type="date" />
+          <Property Name="FileDate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.BO_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BO_Record">
+          <Key>
+            <PropertyRef Name="file_date" />
+          </Key>
+          <Property Name="surety_code" Type="nchar" MaxLength="3" />
+          <Property Name="rdp" Type="nchar" MaxLength="5" />
+          <Property Name="bond_number" Type="nchar" MaxLength="9" />
+          <Property Name="bond_activity_code" Type="nchar" MaxLength="3" />
+          <Property Name="bond_effective_date" Type="smalldatetime" />
+          <Property Name="bond_termination_date" Type="smalldatetime" />
+          <Property Name="bond_liability_amount" Type="real" />
+          <Property Name="reconciliation_rider_effective_date" Type="smalldatetime" />
+          <Property Name="filler1" Type="nchar" MaxLength="34" />
+          <Property Name="importer_number_line_1" Type="nchar" MaxLength="12" />
+          <Property Name="importer_name" Type="nchar" MaxLength="32" />
+          <Property Name="importer_address" Type="nchar" MaxLength="32" />
+          <Property Name="filler2" Type="nchar" MaxLength="1" />
+          <Property Name="importer_address_line_2" Type="nchar" MaxLength="32" />
+          <Property Name="importer_city" Type="nchar" MaxLength="21" />
+          <Property Name="importer_state" Type="nchar" MaxLength="2" />
+          <Property Name="importer_5digit_zip" Type="nchar" MaxLength="5" />
+          <Property Name="importer_4digit_zip" Type="nchar" MaxLength="4" />
+          <Property Name="filler3" Type="nchar" MaxLength="13" />
+          <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BondTypes">
+          <Key>
+            <PropertyRef Name="BondTypeId" />
+          </Key>
+          <Property Name="BondTypeId" Type="tinyint" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ClassCode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassCode" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="80" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EntryType">
+          <Key>
+            <PropertyRef Name="EntryTypeId" />
+          </Key>
+          <Property Name="EntryTypeId" Type="tinyint" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FilerCodes">
+          <Key>
+            <PropertyRef Name="FilerCode" />
+          </Key>
+          <Property Name="FilerCode" Type="nchar" MaxLength="3" Nullable="false" />
+          <Property Name="FilerName" Type="nvarchar" MaxLength="80" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.PortCode' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PortCode">
+          <Key>
+            <PropertyRef Name="PortCodeId" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="PortCodeId" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vType3EntriesWithBO">
+          <Key>
+            <PropertyRef Name="file_date" />
+            <PropertyRef Name="Expr2" />
+          </Key>
+          <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
+          <Property Name="surety_code" Type="nvarchar" MaxLength="3" />
+          <Property Name="bond_number" Type="nvarchar" MaxLength="9" />
+          <Property Name="bond_type" Type="tinyint" />
+          <Property Name="entry_type" Type="tinyint" />
+          <Property Name="release_summary_indicator" Type="tinyint" />
+          <Property Name="importer_of_record" Type="nvarchar" MaxLength="12" />
+          <Property Name="entry_source" Type="tinyint" />
+          <Property Name="release_date" Type="smalldatetime" />
+          <Property Name="value" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="broker_reference_number" Type="nvarchar" MaxLength="9" />
+          <Property Name="cancel_date" Type="smalldatetime" />
+          <Property Name="collection_status" Type="tinyint" />
+          <Property Name="district_port_of_entry2" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code2" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number2" Type="nvarchar" MaxLength="9" />
+          <Property Name="entry_date" Type="smalldatetime" />
+          <Property Name="record_status" Type="tinyint" />
+          <Property Name="accelerated_drawback_indicator" Type="nvarchar" MaxLength="1" />
+          <Property Name="possible_late_indicator" Type="tinyint" />
+          <Property Name="oga_indicator" Type="nvarchar" MaxLength="1" />
+          <Property Name="entry_summary_date" Type="smalldatetime" />
+          <Property Name="collection_date" Type="smalldatetime" />
+          <Property Name="warehouse_entry_summary_number" Type="nvarchar" MaxLength="11" />
+          <Property Name="tentative_tib_close_date_liquidation_date" Type="smalldatetime" />
+          <Property Name="estimated_duty" Type="money" />
+          <Property Name="estimated_taxes" Type="money" />
+          <Property Name="district_port_of_entry3" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code3" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number3" Type="nvarchar" MaxLength="9" />
+          <Property Name="estimated_fee" Type="money" />
+          <Property Name="estimated_antidumping_duty" Type="money" />
+          <Property Name="bonded_antidumping_duty" Type="money" />
+          <Property Name="estimated_countervailing_duty" Type="money" />
+          <Property Name="bonded_countervailing_duty" Type="money" />
+          <Property Name="recon_entry_nafta_issue_entry_type_09" Type="nvarchar" MaxLength="1" />
+          <Property Name="recon_entry_other_issue_entry_type_09" Type="nvarchar" MaxLength="3" />
+          <Property Name="pay_basis_indicator" Type="tinyint" />
+          <Property Name="filler3" Type="nvarchar" MaxLength="2" />
+          <Property Name="district_port_of_entry4" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code4" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number4" Type="nvarchar" MaxLength="9" />
+          <Property Name="nafta_reconciliation_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="nafta_reconciliation" Type="nvarchar" MaxLength="11" />
+          <Property Name="other_reconciliation_flag" Type="nvarchar" MaxLength="3" />
+          <Property Name="other_reconciliation_entry" Type="nvarchar" MaxLength="11" />
+          <Property Name="single_entry_bond_amount" Type="nvarchar" MaxLength="11" />
+          <Property Name="single_entry_bond_producer_account_number" Type="nvarchar" MaxLength="10" />
+          <Property Name="filler4" Type="nvarchar" MaxLength="16" />
+          <Property Name="district_port_of_entry5" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="filer_code5" Type="nvarchar" MaxLength="3" />
+          <Property Name="entry_number5" Type="nvarchar" MaxLength="9" />
+          <Property Name="first_associated_import_entry" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_1" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_2" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_3" Type="nvarchar" MaxLength="11" />
+          <Property Name="next_associated_import_entry_4" Type="nvarchar" MaxLength="11" />
+          <Property Name="filler5" Type="nvarchar" MaxLength="7" />
+          <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+          <Property Name="importer_name" Type="nchar" MaxLength="32" />
+          <Property Name="bond_effective_date" Type="smalldatetime" />
+          <Property Name="bond_termination_date" Type="smalldatetime" />
+          <Property Name="bond_liability_amount" Type="real" />
+          <Property Name="importer_city" Type="nchar" MaxLength="21" />
+          <Property Name="importer_state" Type="nchar" MaxLength="2" />
+          <Property Name="importer_5digit_zip" Type="nchar" MaxLength="5" />
+          <Property Name="importer_4digit_zip" Type="nchar" MaxLength="4" />
+          <Property Name="rdp" Type="nchar" MaxLength="5" />
+          <Property Name="bond_activity_code" Type="nchar" MaxLength="3" />
+          <Property Name="Expr1" Type="tinyint" />
+          <Property Name="Expr2" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="cbpmqdbModelStoreContainer">
+          <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BondTypes" EntityType="Self.BondTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClassCode" EntityType="Self.ClassCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntryType" EntityType="Self.EntryType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FilerCodes" EntityType="Self.FilerCodes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AQ_Record].[district_port_of_entry1] AS [district_port_of_entry1], 
+    [AQ_Record].[filer_code1] AS [filer_code1], 
+    [AQ_Record].[entry_number1] AS [entry_number1], 
+    [AQ_Record].[surety_code] AS [surety_code], 
+    [AQ_Record].[bond_number] AS [bond_number], 
+    [AQ_Record].[bond_type] AS [bond_type], 
+    [AQ_Record].[entry_type] AS [entry_type], 
+    [AQ_Record].[release_summary_indicator] AS [release_summary_indicator], 
+    [AQ_Record].[importer_of_record] AS [importer_of_record], 
+    [AQ_Record].[entry_source] AS [entry_source], 
+    [AQ_Record].[release_date] AS [release_date], 
+    [AQ_Record].[value] AS [value], 
+    [AQ_Record].[broker_reference_number] AS [broker_reference_number], 
+    [AQ_Record].[cancel_date] AS [cancel_date], 
+    [AQ_Record].[collection_status] AS [collection_status], 
+    [AQ_Record].[district_port_of_entry2] AS [district_port_of_entry2], 
+    [AQ_Record].[filer_code2] AS [filer_code2], 
+    [AQ_Record].[entry_number2] AS [entry_number2], 
+    [AQ_Record].[entry_date] AS [entry_date], 
+    [AQ_Record].[record_status] AS [record_status], 
+    [AQ_Record].[accelerated_drawback_indicator] AS [accelerated_drawback_indicator], 
+    [AQ_Record].[possible_late_indicator] AS [possible_late_indicator], 
+    [AQ_Record].[oga_indicator] AS [oga_indicator], 
+    [AQ_Record].[entry_summary_date] AS [entry_summary_date], 
+    [AQ_Record].[collection_date] AS [collection_date], 
+    [AQ_Record].[warehouse_entry_summary_number] AS [warehouse_entry_summary_number], 
+    [AQ_Record].[tentative_tib_close_date_liquidation_date] AS [tentative_tib_close_date_liquidation_date], 
+    [AQ_Record].[estimated_duty] AS [estimated_duty], 
+    [AQ_Record].[estimated_taxes] AS [estimated_taxes], 
+    [AQ_Record].[district_port_of_entry3] AS [district_port_of_entry3], 
+    [AQ_Record].[filer_code3] AS [filer_code3], 
+    [AQ_Record].[entry_number3] AS [entry_number3], 
+    [AQ_Record].[estimated_fee] AS [estimated_fee], 
+    [AQ_Record].[estimated_antidumping_duty] AS [estimated_antidumping_duty], 
+    [AQ_Record].[bonded_antidumping_duty] AS [bonded_antidumping_duty], 
+    [AQ_Record].[estimated_countervailing_duty] AS [estimated_countervailing_duty], 
+    [AQ_Record].[bonded_countervailing_duty] AS [bonded_countervailing_duty], 
+    [AQ_Record].[recon_entry_nafta_issue_entry_type_09] AS [recon_entry_nafta_issue_entry_type_09], 
+    [AQ_Record].[recon_entry_other_issue_entry_type_09] AS [recon_entry_other_issue_entry_type_09], 
+    [AQ_Record].[pay_basis_indicator] AS [pay_basis_indicator], 
+    [AQ_Record].[filler3] AS [filler3], 
+    [AQ_Record].[district_port_of_entry4] AS [district_port_of_entry4], 
+    [AQ_Record].[filer_code4] AS [filer_code4], 
+    [AQ_Record].[entry_number4] AS [entry_number4], 
+    [AQ_Record].[nafta_reconciliation_flag] AS [nafta_reconciliation_flag], 
+    [AQ_Record].[nafta_reconciliation] AS [nafta_reconciliation], 
+    [AQ_Record].[other_reconciliation_flag] AS [other_reconciliation_flag], 
+    [AQ_Record].[other_reconciliation_entry] AS [other_reconciliation_entry], 
+    [AQ_Record].[single_entry_bond_amount] AS [single_entry_bond_amount], 
+    [AQ_Record].[single_entry_bond_producer_account_number] AS [single_entry_bond_producer_account_number], 
+    [AQ_Record].[filler4] AS [filler4], 
+    [AQ_Record].[district_port_of_entry5] AS [district_port_of_entry5], 
+    [AQ_Record].[filer_code5] AS [filer_code5], 
+    [AQ_Record].[entry_number5] AS [entry_number5], 
+    [AQ_Record].[first_associated_import_entry] AS [first_associated_import_entry], 
+    [AQ_Record].[next_associated_import_entry_1] AS [next_associated_import_entry_1], 
+    [AQ_Record].[next_associated_import_entry_2] AS [next_associated_import_entry_2], 
+    [AQ_Record].[next_associated_import_entry_3] AS [next_associated_import_entry_3], 
+    [AQ_Record].[next_associated_import_entry_4] AS [next_associated_import_entry_4], 
+    [AQ_Record].[filler5] AS [filler5], 
+    [AQ_Record].[file_date] AS [file_date]
+    FROM [dbo].[AQ_Record] AS [AQ_Record]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AS_Record" EntityType="Self.AS_Record" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AS_Record].[district_port_of_entry1] AS [district_port_of_entry1], 
+    [AS_Record].[filer_code1] AS [filer_code1], 
+    [AS_Record].[entry_number1] AS [entry_number1], 
+    [AS_Record].[surety_code] AS [surety_code], 
+    [AS_Record].[bond_number] AS [bond_number], 
+    [AS_Record].[bond_type] AS [bond_type], 
+    [AS_Record].[entry_type] AS [entry_type], 
+    [AS_Record].[release_summary_indicator] AS [release_summary_indicator], 
+    [AS_Record].[importer_of_record] AS [importer_of_record], 
+    [AS_Record].[entry_source] AS [entry_source], 
+    [AS_Record].[release_date] AS [release_date], 
+    [AS_Record].[value] AS [value], 
+    [AS_Record].[broker_reference_number] AS [broker_reference_number], 
+    [AS_Record].[cancel_date] AS [cancel_date], 
+    [AS_Record].[collection_status] AS [collection_status], 
+    [AS_Record].[district_port_of_entry2] AS [district_port_of_entry2], 
+    [AS_Record].[filer_code2] AS [filer_code2], 
+    [AS_Record].[entry_number2] AS [entry_number2], 
+    [AS_Record].[entry_date] AS [entry_date], 
+    [AS_Record].[record_status] AS [record_status], 
+    [AS_Record].[accelerated_drawback_indicator] AS [accelerated_drawback_indicator], 
+    [AS_Record].[possible_late_indicator] AS [possible_late_indicator], 
+    [AS_Record].[oga_indicator] AS [oga_indicator], 
+    [AS_Record].[entry_summary_date] AS [entry_summary_date], 
+    [AS_Record].[collection_date] AS [collection_date], 
+    [AS_Record].[warehouse_entry_summary_number] AS [warehouse_entry_summary_number], 
+    [AS_Record].[tentative_tib_close_date_liquidation_date] AS [tentative_tib_close_date_liquidation_date], 
+    [AS_Record].[estimated_duty] AS [estimated_duty], 
+    [AS_Record].[estimated_taxes] AS [estimated_taxes], 
+    [AS_Record].[district_port_of_entry3] AS [district_port_of_entry3], 
+    [AS_Record].[filer_code3] AS [filer_code3], 
+    [AS_Record].[entry_number3] AS [entry_number3], 
+    [AS_Record].[estimated_fee] AS [estimated_fee], 
+    [AS_Record].[estimated_antidumping_duty] AS [estimated_antidumping_duty], 
+    [AS_Record].[bonded_antidumping_duty] AS [bonded_antidumping_duty], 
+    [AS_Record].[estimated_countervailing_duty] AS [estimated_countervailing_duty], 
+    [AS_Record].[bonded_countervailing_duty] AS [bonded_countervailing_duty], 
+    [AS_Record].[recon_entry_nafta_issue_entry_type_09] AS [recon_entry_nafta_issue_entry_type_09], 
+    [AS_Record].[recon_entry_other_issue_entry_type_09] AS [recon_entry_other_issue_entry_type_09], 
+    [AS_Record].[pay_basis_indicator] AS [pay_basis_indicator], 
+    [AS_Record].[filler3] AS [filler3], 
+    [AS_Record].[district_port_of_entry4] AS [district_port_of_entry4], 
+    [AS_Record].[filer_code4] AS [filer_code4], 
+    [AS_Record].[entry_number4] AS [entry_number4], 
+    [AS_Record].[nafta_reconciliation_flag] AS [nafta_reconciliation_flag], 
+    [AS_Record].[nafta_reconciliation] AS [nafta_reconciliation], 
+    [AS_Record].[other_reconciliation_flag] AS [other_reconciliation_flag], 
+    [AS_Record].[other_reconciliation_entry] AS [other_reconciliation_entry], 
+    [AS_Record].[single_entry_bond_amount] AS [single_entry_bond_amount], 
+    [AS_Record].[single_entry_bond_producer_account_number] AS [single_entry_bond_producer_account_number], 
+    [AS_Record].[filler4] AS [filler4], 
+    [AS_Record].[district_port_of_entry5] AS [district_port_of_entry5], 
+    [AS_Record].[filer_code5] AS [filer_code5], 
+    [AS_Record].[entry_number5] AS [entry_number5], 
+    [AS_Record].[first_associated_import_entry] AS [first_associated_import_entry], 
+    [AS_Record].[next_associated_import_entry_1] AS [next_associated_import_entry_1], 
+    [AS_Record].[next_associated_import_entry_2] AS [next_associated_import_entry_2], 
+    [AS_Record].[next_associated_import_entry_3] AS [next_associated_import_entry_3], 
+    [AS_Record].[next_associated_import_entry_4] AS [next_associated_import_entry_4], 
+    [AS_Record].[filler5] AS [filler5], 
+    [AS_Record].[file_date] AS [file_date]
+    FROM [dbo].[AS_Record] AS [AS_Record]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BO_Record" EntityType="Self.BO_Record" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BO_Record].[surety_code] AS [surety_code], 
+    [BO_Record].[rdp] AS [rdp], 
+    [BO_Record].[bond_number] AS [bond_number], 
+    [BO_Record].[bond_activity_code] AS [bond_activity_code], 
+    [BO_Record].[bond_effective_date] AS [bond_effective_date], 
+    [BO_Record].[bond_termination_date] AS [bond_termination_date], 
+    [BO_Record].[bond_liability_amount] AS [bond_liability_amount], 
+    [BO_Record].[reconciliation_rider_effective_date] AS [reconciliation_rider_effective_date], 
+    [BO_Record].[filler1] AS [filler1], 
+    [BO_Record].[importer_number_line_1] AS [importer_number_line_1], 
+    [BO_Record].[importer_name] AS [importer_name], 
+    [BO_Record].[importer_address] AS [importer_address], 
+    [BO_Record].[filler2] AS [filler2], 
+    [BO_Record].[importer_address_line_2] AS [importer_address_line_2], 
+    [BO_Record].[importer_city] AS [importer_city], 
+    [BO_Record].[importer_state] AS [importer_state], 
+    [BO_Record].[importer_5digit_zip] AS [importer_5digit_zip], 
+    [BO_Record].[importer_4digit_zip] AS [importer_4digit_zip], 
+    [BO_Record].[filler3] AS [filler3], 
+    [BO_Record].[file_date] AS [file_date]
+    FROM [dbo].[BO_Record] AS [BO_Record]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PortCode" EntityType="Self.PortCode" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PortCode].[PortCodeId] AS [PortCodeId], 
+    [PortCode].[Name] AS [Name]
+    FROM [dbo].[PortCode] AS [PortCode]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vType3EntriesWithBO" EntityType="Self.vType3EntriesWithBO" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vType3EntriesWithBO].[district_port_of_entry1] AS [district_port_of_entry1], 
+    [vType3EntriesWithBO].[filer_code1] AS [filer_code1], 
+    [vType3EntriesWithBO].[entry_number1] AS [entry_number1], 
+    [vType3EntriesWithBO].[surety_code] AS [surety_code], 
+    [vType3EntriesWithBO].[bond_number] AS [bond_number], 
+    [vType3EntriesWithBO].[bond_type] AS [bond_type], 
+    [vType3EntriesWithBO].[entry_type] AS [entry_type], 
+    [vType3EntriesWithBO].[release_summary_indicator] AS [release_summary_indicator], 
+    [vType3EntriesWithBO].[importer_of_record] AS [importer_of_record], 
+    [vType3EntriesWithBO].[entry_source] AS [entry_source], 
+    [vType3EntriesWithBO].[release_date] AS [release_date], 
+    [vType3EntriesWithBO].[value] AS [value], 
+    [vType3EntriesWithBO].[broker_reference_number] AS [broker_reference_number], 
+    [vType3EntriesWithBO].[cancel_date] AS [cancel_date], 
+    [vType3EntriesWithBO].[collection_status] AS [collection_status], 
+    [vType3EntriesWithBO].[district_port_of_entry2] AS [district_port_of_entry2], 
+    [vType3EntriesWithBO].[filer_code2] AS [filer_code2], 
+    [vType3EntriesWithBO].[entry_number2] AS [entry_number2], 
+    [vType3EntriesWithBO].[entry_date] AS [entry_date], 
+    [vType3EntriesWithBO].[record_status] AS [record_status], 
+    [vType3EntriesWithBO].[accelerated_drawback_indicator] AS [accelerated_drawback_indicator], 
+    [vType3EntriesWithBO].[possible_late_indicator] AS [possible_late_indicator], 
+    [vType3EntriesWithBO].[oga_indicator] AS [oga_indicator], 
+    [vType3EntriesWithBO].[entry_summary_date] AS [entry_summary_date], 
+    [vType3EntriesWithBO].[collection_date] AS [collection_date], 
+    [vType3EntriesWithBO].[warehouse_entry_summary_number] AS [warehouse_entry_summary_number], 
+    [vType3EntriesWithBO].[tentative_tib_close_date_liquidation_date] AS [tentative_tib_close_date_liquidation_date], 
+    [vType3EntriesWithBO].[estimated_duty] AS [estimated_duty], 
+    [vType3EntriesWithBO].[estimated_taxes] AS [estimated_taxes], 
+    [vType3EntriesWithBO].[district_port_of_entry3] AS [district_port_of_entry3], 
+    [vType3EntriesWithBO].[filer_code3] AS [filer_code3], 
+    [vType3EntriesWithBO].[entry_number3] AS [entry_number3], 
+    [vType3EntriesWithBO].[estimated_fee] AS [estimated_fee], 
+    [vType3EntriesWithBO].[estimated_antidumping_duty] AS [estimated_antidumping_duty], 
+    [vType3EntriesWithBO].[bonded_antidumping_duty] AS [bonded_antidumping_duty], 
+    [vType3EntriesWithBO].[estimated_countervailing_duty] AS [estimated_countervailing_duty], 
+    [vType3EntriesWithBO].[bonded_countervailing_duty] AS [bonded_countervailing_duty], 
+    [vType3EntriesWithBO].[recon_entry_nafta_issue_entry_type_09] AS [recon_entry_nafta_issue_entry_type_09], 
+    [vType3EntriesWithBO].[recon_entry_other_issue_entry_type_09] AS [recon_entry_other_issue_entry_type_09], 
+    [vType3EntriesWithBO].[pay_basis_indicator] AS [pay_basis_indicator], 
+    [vType3EntriesWithBO].[filler3] AS [filler3], 
+    [vType3EntriesWithBO].[district_port_of_entry4] AS [district_port_of_entry4], 
+    [vType3EntriesWithBO].[filer_code4] AS [filer_code4], 
+    [vType3EntriesWithBO].[entry_number4] AS [entry_number4], 
+    [vType3EntriesWithBO].[nafta_reconciliation_flag] AS [nafta_reconciliation_flag], 
+    [vType3EntriesWithBO].[nafta_reconciliation] AS [nafta_reconciliation], 
+    [vType3EntriesWithBO].[other_reconciliation_flag] AS [other_reconciliation_flag], 
+    [vType3EntriesWithBO].[other_reconciliation_entry] AS [other_reconciliation_entry], 
+    [vType3EntriesWithBO].[single_entry_bond_amount] AS [single_entry_bond_amount], 
+    [vType3EntriesWithBO].[single_entry_bond_producer_account_number] AS [single_entry_bond_producer_account_number], 
+    [vType3EntriesWithBO].[filler4] AS [filler4], 
+    [vType3EntriesWithBO].[district_port_of_entry5] AS [district_port_of_entry5], 
+    [vType3EntriesWithBO].[filer_code5] AS [filer_code5], 
+    [vType3EntriesWithBO].[entry_number5] AS [entry_number5], 
+    [vType3EntriesWithBO].[first_associated_import_entry] AS [first_associated_import_entry], 
+    [vType3EntriesWithBO].[next_associated_import_entry_1] AS [next_associated_import_entry_1], 
+    [vType3EntriesWithBO].[next_associated_import_entry_2] AS [next_associated_import_entry_2], 
+    [vType3EntriesWithBO].[next_associated_import_entry_3] AS [next_associated_import_entry_3], 
+    [vType3EntriesWithBO].[next_associated_import_entry_4] AS [next_associated_import_entry_4], 
+    [vType3EntriesWithBO].[filler5] AS [filler5], 
+    [vType3EntriesWithBO].[file_date] AS [file_date], 
+    [vType3EntriesWithBO].[importer_name] AS [importer_name], 
+    [vType3EntriesWithBO].[bond_effective_date] AS [bond_effective_date], 
+    [vType3EntriesWithBO].[bond_termination_date] AS [bond_termination_date], 
+    [vType3EntriesWithBO].[bond_liability_amount] AS [bond_liability_amount], 
+    [vType3EntriesWithBO].[importer_city] AS [importer_city], 
+    [vType3EntriesWithBO].[importer_state] AS [importer_state], 
+    [vType3EntriesWithBO].[importer_5digit_zip] AS [importer_5digit_zip], 
+    [vType3EntriesWithBO].[importer_4digit_zip] AS [importer_4digit_zip], 
+    [vType3EntriesWithBO].[rdp] AS [rdp], 
+    [vType3EntriesWithBO].[bond_activity_code] AS [bond_activity_code], 
+    [vType3EntriesWithBO].[Expr1] AS [Expr1], 
+    [vType3EntriesWithBO].[Expr2] AS [Expr2]
+    FROM [dbo].[vType3EntriesWithBO] AS [vType3EntriesWithBO]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="cbpmqdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ASAQEmail">
+          <Key>
+            <PropertyRef Name="EmailID" />
+          </Key>
+          <Property Name="EmailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Importer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BondNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+          <Property Name="EmailSentDate" Type="DateTime" Precision="0" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EntryDate" Type="DateTime" Precision="0" />
+          <Property Name="FileDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="BondType">
+          <Key>
+            <PropertyRef Name="BondTypeId" />
+          </Key>
+          <Property Name="BondTypeId" Type="Byte" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EntryType">
+          <Key>
+            <PropertyRef Name="EntryTypeId" />
+          </Key>
+          <Property Name="EntryTypeId" Type="Byte" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FilerCode">
+          <Key>
+            <PropertyRef Name="FilerCode1" />
+          </Key>
+          <Property Name="FilerCode1" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="FilerName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AQ_Record">
+          <Key>
+            <PropertyRef Name="file_date" />
+          </Key>
+          <Property Name="district_port_of_entry1" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number1" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="surety_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="bond_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="bond_type" Type="Byte" />
+          <Property Name="entry_type" Type="Byte" />
+          <Property Name="release_summary_indicator" Type="Byte" />
+          <Property Name="importer_of_record" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="entry_source" Type="Byte" />
+          <Property Name="release_date" Type="DateTime" Precision="0" />
+          <Property Name="value" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="broker_reference_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="cancel_date" Type="DateTime" Precision="0" />
+          <Property Name="collection_status" Type="Byte" />
+          <Property Name="district_port_of_entry2" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number2" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="entry_date" Type="DateTime" Precision="0" />
+          <Property Name="record_status" Type="Byte" />
+          <Property Name="accelerated_drawback_indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="possible_late_indicator" Type="Byte" />
+          <Property Name="oga_indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="entry_summary_date" Type="DateTime" Precision="0" />
+          <Property Name="collection_date" Type="DateTime" Precision="0" />
+          <Property Name="warehouse_entry_summary_number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="tentative_tib_close_date_liquidation_date" Type="DateTime" Precision="0" />
+          <Property Name="estimated_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_taxes" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="district_port_of_entry3" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number3" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="estimated_fee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_antidumping_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bonded_antidumping_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_countervailing_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bonded_countervailing_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="recon_entry_nafta_issue_entry_type_09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="recon_entry_other_issue_entry_type_09" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="pay_basis_indicator" Type="Byte" />
+          <Property Name="filler3" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="district_port_of_entry4" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number4" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="nafta_reconciliation_flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="nafta_reconciliation" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="other_reconciliation_flag" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="other_reconciliation_entry" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="single_entry_bond_amount" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="single_entry_bond_producer_account_number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="filler4" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="district_port_of_entry5" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number5" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="first_associated_import_entry" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_1" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_2" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_3" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_4" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="filler5" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="file_date" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="AS_Record">
+          <Key>
+            <PropertyRef Name="file_date" />
+          </Key>
+          <Property Name="district_port_of_entry1" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number1" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="surety_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="bond_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="bond_type" Type="Byte" />
+          <Property Name="entry_type" Type="Byte" />
+          <Property Name="release_summary_indicator" Type="Byte" />
+          <Property Name="importer_of_record" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="entry_source" Type="Byte" />
+          <Property Name="release_date" Type="DateTime" Precision="0" />
+          <Property Name="value" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="broker_reference_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="cancel_date" Type="DateTime" Precision="0" />
+          <Property Name="collection_status" Type="Byte" />
+          <Property Name="district_port_of_entry2" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number2" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="entry_date" Type="DateTime" Precision="0" />
+          <Property Name="record_status" Type="Byte" />
+          <Property Name="accelerated_drawback_indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="possible_late_indicator" Type="Byte" />
+          <Property Name="oga_indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="entry_summary_date" Type="DateTime" Precision="0" />
+          <Property Name="collection_date" Type="DateTime" Precision="0" />
+          <Property Name="warehouse_entry_summary_number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="tentative_tib_close_date_liquidation_date" Type="DateTime" Precision="0" />
+          <Property Name="estimated_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_taxes" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="district_port_of_entry3" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number3" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="estimated_fee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_antidumping_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bonded_antidumping_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_countervailing_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bonded_countervailing_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="recon_entry_nafta_issue_entry_type_09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="recon_entry_other_issue_entry_type_09" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="pay_basis_indicator" Type="Byte" />
+          <Property Name="filler3" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="district_port_of_entry4" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number4" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="nafta_reconciliation_flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="nafta_reconciliation" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="other_reconciliation_flag" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="other_reconciliation_entry" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="single_entry_bond_amount" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="single_entry_bond_producer_account_number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="filler4" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="district_port_of_entry5" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number5" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="first_associated_import_entry" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_1" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_2" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_3" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_4" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="filler5" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="file_date" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="BO_Record">
+          <Key>
+            <PropertyRef Name="file_date" />
+          </Key>
+          <Property Name="surety_code" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="rdp" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="bond_number" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+          <Property Name="bond_activity_code" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="bond_effective_date" Type="DateTime" Precision="0" />
+          <Property Name="bond_termination_date" Type="DateTime" Precision="0" />
+          <Property Name="bond_liability_amount" Type="Single" />
+          <Property Name="reconciliation_rider_effective_date" Type="DateTime" Precision="0" />
+          <Property Name="filler1" Type="String" MaxLength="34" FixedLength="true" Unicode="true" />
+          <Property Name="importer_number_line_1" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="importer_name" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+          <Property Name="importer_address" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+          <Property Name="filler2" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="importer_address_line_2" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+          <Property Name="importer_city" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+          <Property Name="importer_state" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="importer_5digit_zip" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="importer_4digit_zip" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="filler3" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+          <Property Name="file_date" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="PortCode">
+          <Key>
+            <PropertyRef Name="PortCodeId" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="PortCodeId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="cbpmqdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmail" />
+          <EntitySet Name="BondTypes" EntityType="Self.BondType" />
+          <EntitySet Name="EntryTypes" EntityType="Self.EntryType" />
+          <EntitySet Name="FilerCodes" EntityType="Self.FilerCode" />
+          <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" />
+          <EntitySet Name="AS_Record" EntityType="Self.AS_Record" />
+          <EntitySet Name="BO_Record" EntityType="Self.BO_Record" />
+          <EntitySet Name="PortCodes" EntityType="Self.PortCode" />
+          <EntitySet Name="ClassCodes" EntityType="cbpmqdbModel.ClassCode" />
+          <EntitySet Name="vType3EntriesWithBO" EntityType="cbpmqdbModel.vType3EntriesWithBO" />
+        </EntityContainer>
+        <EntityType Name="ClassCode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassCode1" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vType3EntriesWithBO">
+          <Key>
+            <PropertyRef Name="file_date" />
+            <PropertyRef Name="Expr2" />
+          </Key>
+          <Property Name="district_port_of_entry1" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number1" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="surety_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="bond_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="bond_type" Type="Byte" />
+          <Property Name="entry_type" Type="Byte" />
+          <Property Name="release_summary_indicator" Type="Byte" />
+          <Property Name="importer_of_record" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="entry_source" Type="Byte" />
+          <Property Name="release_date" Type="DateTime" Precision="0" />
+          <Property Name="value" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="broker_reference_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="cancel_date" Type="DateTime" Precision="0" />
+          <Property Name="collection_status" Type="Byte" />
+          <Property Name="district_port_of_entry2" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number2" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="entry_date" Type="DateTime" Precision="0" />
+          <Property Name="record_status" Type="Byte" />
+          <Property Name="accelerated_drawback_indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="possible_late_indicator" Type="Byte" />
+          <Property Name="oga_indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="entry_summary_date" Type="DateTime" Precision="0" />
+          <Property Name="collection_date" Type="DateTime" Precision="0" />
+          <Property Name="warehouse_entry_summary_number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="tentative_tib_close_date_liquidation_date" Type="DateTime" Precision="0" />
+          <Property Name="estimated_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_taxes" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="district_port_of_entry3" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number3" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="estimated_fee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_antidumping_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bonded_antidumping_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="estimated_countervailing_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bonded_countervailing_duty" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="recon_entry_nafta_issue_entry_type_09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="recon_entry_other_issue_entry_type_09" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="pay_basis_indicator" Type="Byte" />
+          <Property Name="filler3" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="district_port_of_entry4" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number4" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="nafta_reconciliation_flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="nafta_reconciliation" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="other_reconciliation_flag" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="other_reconciliation_entry" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="single_entry_bond_amount" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="single_entry_bond_producer_account_number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="filler4" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="district_port_of_entry5" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="filer_code5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="entry_number5" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="first_associated_import_entry" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_1" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_2" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_3" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="next_associated_import_entry_4" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="filler5" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="file_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="importer_name" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+          <Property Name="bond_effective_date" Type="DateTime" Precision="0" />
+          <Property Name="bond_termination_date" Type="DateTime" Precision="0" />
+          <Property Name="bond_liability_amount" Type="Single" />
+          <Property Name="importer_city" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+          <Property Name="importer_state" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="importer_5digit_zip" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="importer_4digit_zip" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="rdp" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="bond_activity_code" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="Expr1" Type="Byte" />
+          <Property Name="Expr2" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="cbpmqdbModelStoreContainer" CdmEntityContainer="cbpmqdbEntities">
+          <EntitySetMapping Name="ASAQEmails">
+            <EntityTypeMapping TypeName="cbpmqdbModel.ASAQEmail">
+              <MappingFragment StoreEntitySet="ASAQEmails">
+                <ScalarProperty Name="FileDate" ColumnName="FileDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Importer" ColumnName="Importer" />
+                <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="EmailSentDate" ColumnName="EmailSentDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BondTypes">
+            <EntityTypeMapping TypeName="cbpmqdbModel.BondType">
+              <MappingFragment StoreEntitySet="BondTypes">
+                <ScalarProperty Name="BondTypeId" ColumnName="BondTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntryTypes">
+            <EntityTypeMapping TypeName="cbpmqdbModel.EntryType">
+              <MappingFragment StoreEntitySet="EntryType">
+                <ScalarProperty Name="EntryTypeId" ColumnName="EntryTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilerCodes">
+            <EntityTypeMapping TypeName="cbpmqdbModel.FilerCode">
+              <MappingFragment StoreEntitySet="FilerCodes">
+                <ScalarProperty Name="FilerCode1" ColumnName="FilerCode" />
+                <ScalarProperty Name="FilerName" ColumnName="FilerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AQ_Record">
+            <EntityTypeMapping TypeName="cbpmqdbModel.AQ_Record">
+              <MappingFragment StoreEntitySet="AQ_Record">
+                <ScalarProperty Name="district_port_of_entry1" ColumnName="district_port_of_entry1" />
+                <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
+                <ScalarProperty Name="entry_number1" ColumnName="entry_number1" />
+                <ScalarProperty Name="surety_code" ColumnName="surety_code" />
+                <ScalarProperty Name="bond_number" ColumnName="bond_number" />
+                <ScalarProperty Name="bond_type" ColumnName="bond_type" />
+                <ScalarProperty Name="entry_type" ColumnName="entry_type" />
+                <ScalarProperty Name="release_summary_indicator" ColumnName="release_summary_indicator" />
+                <ScalarProperty Name="importer_of_record" ColumnName="importer_of_record" />
+                <ScalarProperty Name="entry_source" ColumnName="entry_source" />
+                <ScalarProperty Name="release_date" ColumnName="release_date" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="broker_reference_number" ColumnName="broker_reference_number" />
+                <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
+                <ScalarProperty Name="collection_status" ColumnName="collection_status" />
+                <ScalarProperty Name="district_port_of_entry2" ColumnName="district_port_of_entry2" />
+                <ScalarProperty Name="filer_code2" ColumnName="filer_code2" />
+                <ScalarProperty Name="entry_number2" ColumnName="entry_number2" />
+                <ScalarProperty Name="entry_date" ColumnName="entry_date" />
+                <ScalarProperty Name="record_status" ColumnName="record_status" />
+                <ScalarProperty Name="accelerated_drawback_indicator" ColumnName="accelerated_drawback_indicator" />
+                <ScalarProperty Name="possible_late_indicator" ColumnName="possible_late_indicator" />
+                <ScalarProperty Name="oga_indicator" ColumnName="oga_indicator" />
+                <ScalarProperty Name="entry_summary_date" ColumnName="entry_summary_date" />
+                <ScalarProperty Name="collection_date" ColumnName="collection_date" />
+                <ScalarProperty Name="warehouse_entry_summary_number" ColumnName="warehouse_entry_summary_number" />
+                <ScalarProperty Name="tentative_tib_close_date_liquidation_date" ColumnName="tentative_tib_close_date_liquidation_date" />
+                <ScalarProperty Name="estimated_duty" ColumnName="estimated_duty" />
+                <ScalarProperty Name="estimated_taxes" ColumnName="estimated_taxes" />
+                <ScalarProperty Name="district_port_of_entry3" ColumnName="district_port_of_entry3" />
+                <ScalarProperty Name="filer_code3" ColumnName="filer_code3" />
+                <ScalarProperty Name="entry_number3" ColumnName="entry_number3" />
+                <ScalarProperty Name="estimated_fee" ColumnName="estimated_fee" />
+                <ScalarProperty Name="estimated_antidumping_duty" ColumnName="estimated_antidumping_duty" />
+                <ScalarProperty Name="bonded_antidumping_duty" ColumnName="bonded_antidumping_duty" />
+                <ScalarProperty Name="estimated_countervailing_duty" ColumnName="estimated_countervailing_duty" />
+                <ScalarProperty Name="bonded_countervailing_duty" ColumnName="bonded_countervailing_duty" />
+                <ScalarProperty Name="recon_entry_nafta_issue_entry_type_09" ColumnName="recon_entry_nafta_issue_entry_type_09" />
+                <ScalarProperty Name="recon_entry_other_issue_entry_type_09" ColumnName="recon_entry_other_issue_entry_type_09" />
+                <ScalarProperty Name="pay_basis_indicator" ColumnName="pay_basis_indicator" />
+                <ScalarProperty Name="filler3" ColumnName="filler3" />
+                <ScalarProperty Name="district_port_of_entry4" ColumnName="district_port_of_entry4" />
+                <ScalarProperty Name="filer_code4" ColumnName="filer_code4" />
+                <ScalarProperty Name="entry_number4" ColumnName="entry_number4" />
+                <ScalarProperty Name="nafta_reconciliation_flag" ColumnName="nafta_reconciliation_flag" />
+                <ScalarProperty Name="nafta_reconciliation" ColumnName="nafta_reconciliation" />
+                <ScalarProperty Name="other_reconciliation_flag" ColumnName="other_reconciliation_flag" />
+                <ScalarProperty Name="other_reconciliation_entry" ColumnName="other_reconciliation_entry" />
+                <ScalarProperty Name="single_entry_bond_amount" ColumnName="single_entry_bond_amount" />
+                <ScalarProperty Name="single_entry_bond_producer_account_number" ColumnName="single_entry_bond_producer_account_number" />
+                <ScalarProperty Name="filler4" ColumnName="filler4" />
+                <ScalarProperty Name="district_port_of_entry5" ColumnName="district_port_of_entry5" />
+                <ScalarProperty Name="filer_code5" ColumnName="filer_code5" />
+                <ScalarProperty Name="entry_number5" ColumnName="entry_number5" />
+                <ScalarProperty Name="first_associated_import_entry" ColumnName="first_associated_import_entry" />
+                <ScalarProperty Name="next_associated_import_entry_1" ColumnName="next_associated_import_entry_1" />
+                <ScalarProperty Name="next_associated_import_entry_2" ColumnName="next_associated_import_entry_2" />
+                <ScalarProperty Name="next_associated_import_entry_3" ColumnName="next_associated_import_entry_3" />
+                <ScalarProperty Name="next_associated_import_entry_4" ColumnName="next_associated_import_entry_4" />
+                <ScalarProperty Name="filler5" ColumnName="filler5" />
+                <ScalarProperty Name="file_date" ColumnName="file_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AS_Record">
+            <EntityTypeMapping TypeName="cbpmqdbModel.AS_Record">
+              <MappingFragment StoreEntitySet="AS_Record">
+                <ScalarProperty Name="district_port_of_entry1" ColumnName="district_port_of_entry1" />
+                <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
+                <ScalarProperty Name="entry_number1" ColumnName="entry_number1" />
+                <ScalarProperty Name="surety_code" ColumnName="surety_code" />
+                <ScalarProperty Name="bond_number" ColumnName="bond_number" />
+                <ScalarProperty Name="bond_type" ColumnName="bond_type" />
+                <ScalarProperty Name="entry_type" ColumnName="entry_type" />
+                <ScalarProperty Name="release_summary_indicator" ColumnName="release_summary_indicator" />
+                <ScalarProperty Name="importer_of_record" ColumnName="importer_of_record" />
+                <ScalarProperty Name="entry_source" ColumnName="entry_source" />
+                <ScalarProperty Name="release_date" ColumnName="release_date" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="broker_reference_number" ColumnName="broker_reference_number" />
+                <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
+                <ScalarProperty Name="collection_status" ColumnName="collection_status" />
+                <ScalarProperty Name="district_port_of_entry2" ColumnName="district_port_of_entry2" />
+                <ScalarProperty Name="filer_code2" ColumnName="filer_code2" />
+                <ScalarProperty Name="entry_number2" ColumnName="entry_number2" />
+                <ScalarProperty Name="entry_date" ColumnName="entry_date" />
+                <ScalarProperty Name="record_status" ColumnName="record_status" />
+                <ScalarProperty Name="accelerated_drawback_indicator" ColumnName="accelerated_drawback_indicator" />
+                <ScalarProperty Name="possible_late_indicator" ColumnName="possible_late_indicator" />
+                <ScalarProperty Name="oga_indicator" ColumnName="oga_indicator" />
+                <ScalarProperty Name="entry_summary_date" ColumnName="entry_summary_date" />
+                <ScalarProperty Name="collection_date" ColumnName="collection_date" />
+                <ScalarProperty Name="warehouse_entry_summary_number" ColumnName="warehouse_entry_summary_number" />
+                <ScalarProperty Name="tentative_tib_close_date_liquidation_date" ColumnName="tentative_tib_close_date_liquidation_date" />
+                <ScalarProperty Name="estimated_duty" ColumnName="estimated_duty" />
+                <ScalarProperty Name="estimated_taxes" ColumnName="estimated_taxes" />
+                <ScalarProperty Name="district_port_of_entry3" ColumnName="district_port_of_entry3" />
+                <ScalarProperty Name="filer_code3" ColumnName="filer_code3" />
+                <ScalarProperty Name="entry_number3" ColumnName="entry_number3" />
+                <ScalarProperty Name="estimated_fee" ColumnName="estimated_fee" />
+                <ScalarProperty Name="estimated_antidumping_duty" ColumnName="estimated_antidumping_duty" />
+                <ScalarProperty Name="bonded_antidumping_duty" ColumnName="bonded_antidumping_duty" />
+                <ScalarProperty Name="estimated_countervailing_duty" ColumnName="estimated_countervailing_duty" />
+                <ScalarProperty Name="bonded_countervailing_duty" ColumnName="bonded_countervailing_duty" />
+                <ScalarProperty Name="recon_entry_nafta_issue_entry_type_09" ColumnName="recon_entry_nafta_issue_entry_type_09" />
+                <ScalarProperty Name="recon_entry_other_issue_entry_type_09" ColumnName="recon_entry_other_issue_entry_type_09" />
+                <ScalarProperty Name="pay_basis_indicator" ColumnName="pay_basis_indicator" />
+                <ScalarProperty Name="filler3" ColumnName="filler3" />
+                <ScalarProperty Name="district_port_of_entry4" ColumnName="district_port_of_entry4" />
+                <ScalarProperty Name="filer_code4" ColumnName="filer_code4" />
+                <ScalarProperty Name="entry_number4" ColumnName="entry_number4" />
+                <ScalarProperty Name="nafta_reconciliation_flag" ColumnName="nafta_reconciliation_flag" />
+                <ScalarProperty Name="nafta_reconciliation" ColumnName="nafta_reconciliation" />
+                <ScalarProperty Name="other_reconciliation_flag" ColumnName="other_reconciliation_flag" />
+                <ScalarProperty Name="other_reconciliation_entry" ColumnName="other_reconciliation_entry" />
+                <ScalarProperty Name="single_entry_bond_amount" ColumnName="single_entry_bond_amount" />
+                <ScalarProperty Name="single_entry_bond_producer_account_number" ColumnName="single_entry_bond_producer_account_number" />
+                <ScalarProperty Name="filler4" ColumnName="filler4" />
+                <ScalarProperty Name="district_port_of_entry5" ColumnName="district_port_of_entry5" />
+                <ScalarProperty Name="filer_code5" ColumnName="filer_code5" />
+                <ScalarProperty Name="entry_number5" ColumnName="entry_number5" />
+                <ScalarProperty Name="first_associated_import_entry" ColumnName="first_associated_import_entry" />
+                <ScalarProperty Name="next_associated_import_entry_1" ColumnName="next_associated_import_entry_1" />
+                <ScalarProperty Name="next_associated_import_entry_2" ColumnName="next_associated_import_entry_2" />
+                <ScalarProperty Name="next_associated_import_entry_3" ColumnName="next_associated_import_entry_3" />
+                <ScalarProperty Name="next_associated_import_entry_4" ColumnName="next_associated_import_entry_4" />
+                <ScalarProperty Name="filler5" ColumnName="filler5" />
+                <ScalarProperty Name="file_date" ColumnName="file_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BO_Record">
+            <EntityTypeMapping TypeName="cbpmqdbModel.BO_Record">
+              <MappingFragment StoreEntitySet="BO_Record">
+                <ScalarProperty Name="surety_code" ColumnName="surety_code" />
+                <ScalarProperty Name="rdp" ColumnName="rdp" />
+                <ScalarProperty Name="bond_number" ColumnName="bond_number" />
+                <ScalarProperty Name="bond_activity_code" ColumnName="bond_activity_code" />
+                <ScalarProperty Name="bond_effective_date" ColumnName="bond_effective_date" />
+                <ScalarProperty Name="bond_termination_date" ColumnName="bond_termination_date" />
+                <ScalarProperty Name="bond_liability_amount" ColumnName="bond_liability_amount" />
+                <ScalarProperty Name="reconciliation_rider_effective_date" ColumnName="reconciliation_rider_effective_date" />
+                <ScalarProperty Name="filler1" ColumnName="filler1" />
+                <ScalarProperty Name="importer_number_line_1" ColumnName="importer_number_line_1" />
+                <ScalarProperty Name="importer_name" ColumnName="importer_name" />
+                <ScalarProperty Name="importer_address" ColumnName="importer_address" />
+                <ScalarProperty Name="filler2" ColumnName="filler2" />
+                <ScalarProperty Name="importer_address_line_2" ColumnName="importer_address_line_2" />
+                <ScalarProperty Name="importer_city" ColumnName="importer_city" />
+                <ScalarProperty Name="importer_state" ColumnName="importer_state" />
+                <ScalarProperty Name="importer_5digit_zip" ColumnName="importer_5digit_zip" />
+                <ScalarProperty Name="importer_4digit_zip" ColumnName="importer_4digit_zip" />
+                <ScalarProperty Name="filler3" ColumnName="filler3" />
+                <ScalarProperty Name="file_date" ColumnName="file_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PortCodes">
+            <EntityTypeMapping TypeName="cbpmqdbModel.PortCode">
+              <MappingFragment StoreEntitySet="PortCode">
+                <ScalarProperty Name="PortCodeId" ColumnName="PortCodeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClassCodes">
+            <EntityTypeMapping TypeName="cbpmqdbModel.ClassCode">
+              <MappingFragment StoreEntitySet="ClassCode">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ClassCode1" ColumnName="ClassCode" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vType3EntriesWithBO">
+            <EntityTypeMapping TypeName="cbpmqdbModel.vType3EntriesWithBO">
+              <MappingFragment StoreEntitySet="vType3EntriesWithBO">
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="bond_activity_code" ColumnName="bond_activity_code" />
+                <ScalarProperty Name="rdp" ColumnName="rdp" />
+                <ScalarProperty Name="importer_4digit_zip" ColumnName="importer_4digit_zip" />
+                <ScalarProperty Name="importer_5digit_zip" ColumnName="importer_5digit_zip" />
+                <ScalarProperty Name="importer_state" ColumnName="importer_state" />
+                <ScalarProperty Name="importer_city" ColumnName="importer_city" />
+                <ScalarProperty Name="bond_liability_amount" ColumnName="bond_liability_amount" />
+                <ScalarProperty Name="bond_termination_date" ColumnName="bond_termination_date" />
+                <ScalarProperty Name="bond_effective_date" ColumnName="bond_effective_date" />
+                <ScalarProperty Name="importer_name" ColumnName="importer_name" />
+                <ScalarProperty Name="file_date" ColumnName="file_date" />
+                <ScalarProperty Name="filler5" ColumnName="filler5" />
+                <ScalarProperty Name="next_associated_import_entry_4" ColumnName="next_associated_import_entry_4" />
+                <ScalarProperty Name="next_associated_import_entry_3" ColumnName="next_associated_import_entry_3" />
+                <ScalarProperty Name="next_associated_import_entry_2" ColumnName="next_associated_import_entry_2" />
+                <ScalarProperty Name="next_associated_import_entry_1" ColumnName="next_associated_import_entry_1" />
+                <ScalarProperty Name="first_associated_import_entry" ColumnName="first_associated_import_entry" />
+                <ScalarProperty Name="entry_number5" ColumnName="entry_number5" />
+                <ScalarProperty Name="filer_code5" ColumnName="filer_code5" />
+                <ScalarProperty Name="district_port_of_entry5" ColumnName="district_port_of_entry5" />
+                <ScalarProperty Name="filler4" ColumnName="filler4" />
+                <ScalarProperty Name="single_entry_bond_producer_account_number" ColumnName="single_entry_bond_producer_account_number" />
+                <ScalarProperty Name="single_entry_bond_amount" ColumnName="single_entry_bond_amount" />
+                <ScalarProperty Name="other_reconciliation_entry" ColumnName="other_reconciliation_entry" />
+                <ScalarProperty Name="other_reconciliation_flag" ColumnName="other_reconciliation_flag" />
+                <ScalarProperty Name="nafta_reconciliation" ColumnName="nafta_reconciliation" />
+                <ScalarProperty Name="nafta_reconciliation_flag" ColumnName="nafta_reconciliation_flag" />
+                <ScalarProperty Name="entry_number4" ColumnName="entry_number4" />
+                <ScalarProperty Name="filer_code4" ColumnName="filer_code4" />
+                <ScalarProperty Name="district_port_of_entry4" ColumnName="district_port_of_entry4" />
+                <ScalarProperty Name="filler3" ColumnName="filler3" />
+                <ScalarProperty Name="pay_basis_indicator" ColumnName="pay_basis_indicator" />
+                <ScalarProperty Name="recon_entry_other_issue_entry_type_09" ColumnName="recon_entry_other_issue_entry_type_09" />
+                <ScalarProperty Name="recon_entry_nafta_issue_entry_type_09" ColumnName="recon_entry_nafta_issue_entry_type_09" />
+                <ScalarProperty Name="bonded_countervailing_duty" ColumnName="bonded_countervailing_duty" />
+                <ScalarProperty Name="estimated_countervailing_duty" ColumnName="estimated_countervailing_duty" />
+                <ScalarProperty Name="bonded_antidumping_duty" ColumnName="bonded_antidumping_duty" />
+                <ScalarProperty Name="estimated_antidumping_duty" ColumnName="estimated_antidumping_duty" />
+                <ScalarProperty Name="estimated_fee" ColumnName="estimated_fee" />
+                <ScalarProperty Name="entry_number3" ColumnName="entry_number3" />
+                <ScalarProperty Name="filer_code3" ColumnName="filer_code3" />
+                <ScalarProperty Name="district_port_of_entry3" ColumnName="district_port_of_entry3" />
+                <ScalarProperty Name="estimated_taxes" ColumnName="estimated_taxes" />
+                <ScalarProperty Name="estimated_duty" ColumnName="estimated_duty" />
+                <ScalarProperty Name="tentative_tib_close_date_liquidation_date" ColumnName="tentative_tib_close_date_liquidation_date" />
+                <ScalarProperty Name="warehouse_entry_summary_number" ColumnName="warehouse_entry_summary_number" />
+                <ScalarProperty Name="collection_date" ColumnName="collection_date" />
+                <ScalarProperty Name="entry_summary_date" ColumnName="entry_summary_date" />
+                <ScalarProperty Name="oga_indicator" ColumnName="oga_indicator" />
+                <ScalarProperty Name="possible_late_indicator" ColumnName="possible_late_indicator" />
+                <ScalarProperty Name="accelerated_drawback_indicator" ColumnName="accelerated_drawback_indicator" />
+                <ScalarProperty Name="record_status" ColumnName="record_status" />
+                <ScalarProperty Name="entry_date" ColumnName="entry_date" />
+                <ScalarProperty Name="entry_number2" ColumnName="entry_number2" />
+                <ScalarProperty Name="filer_code2" ColumnName="filer_code2" />
+                <ScalarProperty Name="district_port_of_entry2" ColumnName="district_port_of_entry2" />
+                <ScalarProperty Name="collection_status" ColumnName="collection_status" />
+                <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
+                <ScalarProperty Name="broker_reference_number" ColumnName="broker_reference_number" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="release_date" ColumnName="release_date" />
+                <ScalarProperty Name="entry_source" ColumnName="entry_source" />
+                <ScalarProperty Name="importer_of_record" ColumnName="importer_of_record" />
+                <ScalarProperty Name="release_summary_indicator" ColumnName="release_summary_indicator" />
+                <ScalarProperty Name="entry_type" ColumnName="entry_type" />
+                <ScalarProperty Name="bond_type" ColumnName="bond_type" />
+                <ScalarProperty Name="bond_number" ColumnName="bond_number" />
+                <ScalarProperty Name="surety_code" ColumnName="surety_code" />
+                <ScalarProperty Name="entry_number1" ColumnName="entry_number1" />
+                <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
+                <ScalarProperty Name="district_port_of_entry1" ColumnName="district_port_of_entry1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

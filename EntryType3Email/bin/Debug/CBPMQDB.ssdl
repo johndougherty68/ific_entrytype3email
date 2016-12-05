@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cbpmqdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.AQ_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AQ_Record">
+    <Key>
+      <PropertyRef Name="file_date" />
+    </Key>
+    <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
+    <Property Name="surety_code" Type="nvarchar" MaxLength="3" />
+    <Property Name="bond_number" Type="nvarchar" MaxLength="9" />
+    <Property Name="bond_type" Type="tinyint" />
+    <Property Name="entry_type" Type="tinyint" />
+    <Property Name="release_summary_indicator" Type="tinyint" />
+    <Property Name="importer_of_record" Type="nvarchar" MaxLength="12" />
+    <Property Name="entry_source" Type="tinyint" />
+    <Property Name="release_date" Type="smalldatetime" />
+    <Property Name="value" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="broker_reference_number" Type="nvarchar" MaxLength="9" />
+    <Property Name="cancel_date" Type="smalldatetime" />
+    <Property Name="collection_status" Type="tinyint" />
+    <Property Name="district_port_of_entry2" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code2" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number2" Type="nvarchar" MaxLength="9" />
+    <Property Name="entry_date" Type="smalldatetime" />
+    <Property Name="record_status" Type="tinyint" />
+    <Property Name="accelerated_drawback_indicator" Type="nvarchar" MaxLength="1" />
+    <Property Name="possible_late_indicator" Type="tinyint" />
+    <Property Name="oga_indicator" Type="nvarchar" MaxLength="1" />
+    <Property Name="entry_summary_date" Type="smalldatetime" />
+    <Property Name="collection_date" Type="smalldatetime" />
+    <Property Name="warehouse_entry_summary_number" Type="nvarchar" MaxLength="11" />
+    <Property Name="tentative_tib_close_date_liquidation_date" Type="smalldatetime" />
+    <Property Name="estimated_duty" Type="money" />
+    <Property Name="estimated_taxes" Type="money" />
+    <Property Name="district_port_of_entry3" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code3" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number3" Type="nvarchar" MaxLength="9" />
+    <Property Name="estimated_fee" Type="money" />
+    <Property Name="estimated_antidumping_duty" Type="money" />
+    <Property Name="bonded_antidumping_duty" Type="money" />
+    <Property Name="estimated_countervailing_duty" Type="money" />
+    <Property Name="bonded_countervailing_duty" Type="money" />
+    <Property Name="recon_entry_nafta_issue_entry_type_09" Type="nvarchar" MaxLength="1" />
+    <Property Name="recon_entry_other_issue_entry_type_09" Type="nvarchar" MaxLength="3" />
+    <Property Name="pay_basis_indicator" Type="tinyint" />
+    <Property Name="filler3" Type="nvarchar" MaxLength="2" />
+    <Property Name="district_port_of_entry4" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code4" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number4" Type="nvarchar" MaxLength="9" />
+    <Property Name="nafta_reconciliation_flag" Type="nvarchar" MaxLength="1" />
+    <Property Name="nafta_reconciliation" Type="nvarchar" MaxLength="11" />
+    <Property Name="other_reconciliation_flag" Type="nvarchar" MaxLength="3" />
+    <Property Name="other_reconciliation_entry" Type="nvarchar" MaxLength="11" />
+    <Property Name="single_entry_bond_amount" Type="nvarchar" MaxLength="11" />
+    <Property Name="single_entry_bond_producer_account_number" Type="nvarchar" MaxLength="10" />
+    <Property Name="filler4" Type="nvarchar" MaxLength="16" />
+    <Property Name="district_port_of_entry5" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code5" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number5" Type="nvarchar" MaxLength="9" />
+    <Property Name="first_associated_import_entry" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_1" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_2" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_3" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_4" Type="nvarchar" MaxLength="11" />
+    <Property Name="filler5" Type="nvarchar" MaxLength="7" />
+    <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.AS_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AS_Record">
+    <Key>
+      <PropertyRef Name="file_date" />
+    </Key>
+    <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
+    <Property Name="surety_code" Type="nvarchar" MaxLength="3" />
+    <Property Name="bond_number" Type="nvarchar" MaxLength="9" />
+    <Property Name="bond_type" Type="tinyint" />
+    <Property Name="entry_type" Type="tinyint" />
+    <Property Name="release_summary_indicator" Type="tinyint" />
+    <Property Name="importer_of_record" Type="nvarchar" MaxLength="12" />
+    <Property Name="entry_source" Type="tinyint" />
+    <Property Name="release_date" Type="smalldatetime" />
+    <Property Name="value" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="broker_reference_number" Type="nvarchar" MaxLength="9" />
+    <Property Name="cancel_date" Type="smalldatetime" />
+    <Property Name="collection_status" Type="tinyint" />
+    <Property Name="district_port_of_entry2" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code2" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number2" Type="nvarchar" MaxLength="9" />
+    <Property Name="entry_date" Type="smalldatetime" />
+    <Property Name="record_status" Type="tinyint" />
+    <Property Name="accelerated_drawback_indicator" Type="nvarchar" MaxLength="1" />
+    <Property Name="possible_late_indicator" Type="tinyint" />
+    <Property Name="oga_indicator" Type="nvarchar" MaxLength="1" />
+    <Property Name="entry_summary_date" Type="smalldatetime" />
+    <Property Name="collection_date" Type="smalldatetime" />
+    <Property Name="warehouse_entry_summary_number" Type="nvarchar" MaxLength="11" />
+    <Property Name="tentative_tib_close_date_liquidation_date" Type="smalldatetime" />
+    <Property Name="estimated_duty" Type="money" />
+    <Property Name="estimated_taxes" Type="money" />
+    <Property Name="district_port_of_entry3" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code3" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number3" Type="nvarchar" MaxLength="9" />
+    <Property Name="estimated_fee" Type="money" />
+    <Property Name="estimated_antidumping_duty" Type="money" />
+    <Property Name="bonded_antidumping_duty" Type="money" />
+    <Property Name="estimated_countervailing_duty" Type="money" />
+    <Property Name="bonded_countervailing_duty" Type="money" />
+    <Property Name="recon_entry_nafta_issue_entry_type_09" Type="nvarchar" MaxLength="1" />
+    <Property Name="recon_entry_other_issue_entry_type_09" Type="nvarchar" MaxLength="3" />
+    <Property Name="pay_basis_indicator" Type="tinyint" />
+    <Property Name="filler3" Type="nvarchar" MaxLength="2" />
+    <Property Name="district_port_of_entry4" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code4" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number4" Type="nvarchar" MaxLength="9" />
+    <Property Name="nafta_reconciliation_flag" Type="nvarchar" MaxLength="1" />
+    <Property Name="nafta_reconciliation" Type="nvarchar" MaxLength="11" />
+    <Property Name="other_reconciliation_flag" Type="nvarchar" MaxLength="3" />
+    <Property Name="other_reconciliation_entry" Type="nvarchar" MaxLength="11" />
+    <Property Name="single_entry_bond_amount" Type="nvarchar" MaxLength="11" />
+    <Property Name="single_entry_bond_producer_account_number" Type="nvarchar" MaxLength="10" />
+    <Property Name="filler4" Type="nvarchar" MaxLength="16" />
+    <Property Name="district_port_of_entry5" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code5" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number5" Type="nvarchar" MaxLength="9" />
+    <Property Name="first_associated_import_entry" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_1" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_2" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_3" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_4" Type="nvarchar" MaxLength="11" />
+    <Property Name="filler5" Type="nvarchar" MaxLength="7" />
+    <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASAQEmails">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Importer" Type="varchar" MaxLength="50" />
+    <Property Name="BondNumber" Type="varchar" MaxLength="50" />
+    <Property Name="EffectiveDate" Type="date" />
+    <Property Name="EmailSentDate" Type="date" />
+    <Property Name="Notes" Type="text" />
+    <Property Name="EntryDate" Type="date" />
+    <Property Name="FileDate" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.BO_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BO_Record">
+    <Key>
+      <PropertyRef Name="file_date" />
+    </Key>
+    <Property Name="surety_code" Type="nchar" MaxLength="3" />
+    <Property Name="rdp" Type="nchar" MaxLength="5" />
+    <Property Name="bond_number" Type="nchar" MaxLength="9" />
+    <Property Name="bond_activity_code" Type="nchar" MaxLength="3" />
+    <Property Name="bond_effective_date" Type="smalldatetime" />
+    <Property Name="bond_termination_date" Type="smalldatetime" />
+    <Property Name="bond_liability_amount" Type="real" />
+    <Property Name="reconciliation_rider_effective_date" Type="smalldatetime" />
+    <Property Name="filler1" Type="nchar" MaxLength="34" />
+    <Property Name="importer_number_line_1" Type="nchar" MaxLength="12" />
+    <Property Name="importer_name" Type="nchar" MaxLength="32" />
+    <Property Name="importer_address" Type="nchar" MaxLength="32" />
+    <Property Name="filler2" Type="nchar" MaxLength="1" />
+    <Property Name="importer_address_line_2" Type="nchar" MaxLength="32" />
+    <Property Name="importer_city" Type="nchar" MaxLength="21" />
+    <Property Name="importer_state" Type="nchar" MaxLength="2" />
+    <Property Name="importer_5digit_zip" Type="nchar" MaxLength="5" />
+    <Property Name="importer_4digit_zip" Type="nchar" MaxLength="4" />
+    <Property Name="filler3" Type="nchar" MaxLength="13" />
+    <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BondTypes">
+    <Key>
+      <PropertyRef Name="BondTypeId" />
+    </Key>
+    <Property Name="BondTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ClassCode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassCode" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntryType">
+    <Key>
+      <PropertyRef Name="EntryTypeId" />
+    </Key>
+    <Property Name="EntryTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FilerCodes">
+    <Key>
+      <PropertyRef Name="FilerCode" />
+    </Key>
+    <Property Name="FilerCode" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="FilerName" Type="nvarchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.PortCode' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PortCode">
+    <Key>
+      <PropertyRef Name="PortCodeId" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="PortCodeId" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vType3EntriesWithBO">
+    <Key>
+      <PropertyRef Name="file_date" />
+      <PropertyRef Name="Expr2" />
+    </Key>
+    <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
+    <Property Name="surety_code" Type="nvarchar" MaxLength="3" />
+    <Property Name="bond_number" Type="nvarchar" MaxLength="9" />
+    <Property Name="bond_type" Type="tinyint" />
+    <Property Name="entry_type" Type="tinyint" />
+    <Property Name="release_summary_indicator" Type="tinyint" />
+    <Property Name="importer_of_record" Type="nvarchar" MaxLength="12" />
+    <Property Name="entry_source" Type="tinyint" />
+    <Property Name="release_date" Type="smalldatetime" />
+    <Property Name="value" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="broker_reference_number" Type="nvarchar" MaxLength="9" />
+    <Property Name="cancel_date" Type="smalldatetime" />
+    <Property Name="collection_status" Type="tinyint" />
+    <Property Name="district_port_of_entry2" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code2" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number2" Type="nvarchar" MaxLength="9" />
+    <Property Name="entry_date" Type="smalldatetime" />
+    <Property Name="record_status" Type="tinyint" />
+    <Property Name="accelerated_drawback_indicator" Type="nvarchar" MaxLength="1" />
+    <Property Name="possible_late_indicator" Type="tinyint" />
+    <Property Name="oga_indicator" Type="nvarchar" MaxLength="1" />
+    <Property Name="entry_summary_date" Type="smalldatetime" />
+    <Property Name="collection_date" Type="smalldatetime" />
+    <Property Name="warehouse_entry_summary_number" Type="nvarchar" MaxLength="11" />
+    <Property Name="tentative_tib_close_date_liquidation_date" Type="smalldatetime" />
+    <Property Name="estimated_duty" Type="money" />
+    <Property Name="estimated_taxes" Type="money" />
+    <Property Name="district_port_of_entry3" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code3" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number3" Type="nvarchar" MaxLength="9" />
+    <Property Name="estimated_fee" Type="money" />
+    <Property Name="estimated_antidumping_duty" Type="money" />
+    <Property Name="bonded_antidumping_duty" Type="money" />
+    <Property Name="estimated_countervailing_duty" Type="money" />
+    <Property Name="bonded_countervailing_duty" Type="money" />
+    <Property Name="recon_entry_nafta_issue_entry_type_09" Type="nvarchar" MaxLength="1" />
+    <Property Name="recon_entry_other_issue_entry_type_09" Type="nvarchar" MaxLength="3" />
+    <Property Name="pay_basis_indicator" Type="tinyint" />
+    <Property Name="filler3" Type="nvarchar" MaxLength="2" />
+    <Property Name="district_port_of_entry4" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code4" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number4" Type="nvarchar" MaxLength="9" />
+    <Property Name="nafta_reconciliation_flag" Type="nvarchar" MaxLength="1" />
+    <Property Name="nafta_reconciliation" Type="nvarchar" MaxLength="11" />
+    <Property Name="other_reconciliation_flag" Type="nvarchar" MaxLength="3" />
+    <Property Name="other_reconciliation_entry" Type="nvarchar" MaxLength="11" />
+    <Property Name="single_entry_bond_amount" Type="nvarchar" MaxLength="11" />
+    <Property Name="single_entry_bond_producer_account_number" Type="nvarchar" MaxLength="10" />
+    <Property Name="filler4" Type="nvarchar" MaxLength="16" />
+    <Property Name="district_port_of_entry5" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="filer_code5" Type="nvarchar" MaxLength="3" />
+    <Property Name="entry_number5" Type="nvarchar" MaxLength="9" />
+    <Property Name="first_associated_import_entry" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_1" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_2" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_3" Type="nvarchar" MaxLength="11" />
+    <Property Name="next_associated_import_entry_4" Type="nvarchar" MaxLength="11" />
+    <Property Name="filler5" Type="nvarchar" MaxLength="7" />
+    <Property Name="file_date" Type="smalldatetime" Nullable="false" />
+    <Property Name="importer_name" Type="nchar" MaxLength="32" />
+    <Property Name="bond_effective_date" Type="smalldatetime" />
+    <Property Name="bond_termination_date" Type="smalldatetime" />
+    <Property Name="bond_liability_amount" Type="real" />
+    <Property Name="importer_city" Type="nchar" MaxLength="21" />
+    <Property Name="importer_state" Type="nchar" MaxLength="2" />
+    <Property Name="importer_5digit_zip" Type="nchar" MaxLength="5" />
+    <Property Name="importer_4digit_zip" Type="nchar" MaxLength="4" />
+    <Property Name="rdp" Type="nchar" MaxLength="5" />
+    <Property Name="bond_activity_code" Type="nchar" MaxLength="3" />
+    <Property Name="Expr1" Type="tinyint" />
+    <Property Name="Expr2" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="cbpmqdbModelStoreContainer">
+    <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BondTypes" EntityType="Self.BondTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClassCode" EntityType="Self.ClassCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntryType" EntityType="Self.EntryType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilerCodes" EntityType="Self.FilerCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AQ_Record].[district_port_of_entry1] AS [district_port_of_entry1], 
+    [AQ_Record].[filer_code1] AS [filer_code1], 
+    [AQ_Record].[entry_number1] AS [entry_number1], 
+    [AQ_Record].[surety_code] AS [surety_code], 
+    [AQ_Record].[bond_number] AS [bond_number], 
+    [AQ_Record].[bond_type] AS [bond_type], 
+    [AQ_Record].[entry_type] AS [entry_type], 
+    [AQ_Record].[release_summary_indicator] AS [release_summary_indicator], 
+    [AQ_Record].[importer_of_record] AS [importer_of_record], 
+    [AQ_Record].[entry_source] AS [entry_source], 
+    [AQ_Record].[release_date] AS [release_date], 
+    [AQ_Record].[value] AS [value], 
+    [AQ_Record].[broker_reference_number] AS [broker_reference_number], 
+    [AQ_Record].[cancel_date] AS [cancel_date], 
+    [AQ_Record].[collection_status] AS [collection_status], 
+    [AQ_Record].[district_port_of_entry2] AS [district_port_of_entry2], 
+    [AQ_Record].[filer_code2] AS [filer_code2], 
+    [AQ_Record].[entry_number2] AS [entry_number2], 
+    [AQ_Record].[entry_date] AS [entry_date], 
+    [AQ_Record].[record_status] AS [record_status], 
+    [AQ_Record].[accelerated_drawback_indicator] AS [accelerated_drawback_indicator], 
+    [AQ_Record].[possible_late_indicator] AS [possible_late_indicator], 
+    [AQ_Record].[oga_indicator] AS [oga_indicator], 
+    [AQ_Record].[entry_summary_date] AS [entry_summary_date], 
+    [AQ_Record].[collection_date] AS [collection_date], 
+    [AQ_Record].[warehouse_entry_summary_number] AS [warehouse_entry_summary_number], 
+    [AQ_Record].[tentative_tib_close_date_liquidation_date] AS [tentative_tib_close_date_liquidation_date], 
+    [AQ_Record].[estimated_duty] AS [estimated_duty], 
+    [AQ_Record].[estimated_taxes] AS [estimated_taxes], 
+    [AQ_Record].[district_port_of_entry3] AS [district_port_of_entry3], 
+    [AQ_Record].[filer_code3] AS [filer_code3], 
+    [AQ_Record].[entry_number3] AS [entry_number3], 
+    [AQ_Record].[estimated_fee] AS [estimated_fee], 
+    [AQ_Record].[estimated_antidumping_duty] AS [estimated_antidumping_duty], 
+    [AQ_Record].[bonded_antidumping_duty] AS [bonded_antidumping_duty], 
+    [AQ_Record].[estimated_countervailing_duty] AS [estimated_countervailing_duty], 
+    [AQ_Record].[bonded_countervailing_duty] AS [bonded_countervailing_duty], 
+    [AQ_Record].[recon_entry_nafta_issue_entry_type_09] AS [recon_entry_nafta_issue_entry_type_09], 
+    [AQ_Record].[recon_entry_other_issue_entry_type_09] AS [recon_entry_other_issue_entry_type_09], 
+    [AQ_Record].[pay_basis_indicator] AS [pay_basis_indicator], 
+    [AQ_Record].[filler3] AS [filler3], 
+    [AQ_Record].[district_port_of_entry4] AS [district_port_of_entry4], 
+    [AQ_Record].[filer_code4] AS [filer_code4], 
+    [AQ_Record].[entry_number4] AS [entry_number4], 
+    [AQ_Record].[nafta_reconciliation_flag] AS [nafta_reconciliation_flag], 
+    [AQ_Record].[nafta_reconciliation] AS [nafta_reconciliation], 
+    [AQ_Record].[other_reconciliation_flag] AS [other_reconciliation_flag], 
+    [AQ_Record].[other_reconciliation_entry] AS [other_reconciliation_entry], 
+    [AQ_Record].[single_entry_bond_amount] AS [single_entry_bond_amount], 
+    [AQ_Record].[single_entry_bond_producer_account_number] AS [single_entry_bond_producer_account_number], 
+    [AQ_Record].[filler4] AS [filler4], 
+    [AQ_Record].[district_port_of_entry5] AS [district_port_of_entry5], 
+    [AQ_Record].[filer_code5] AS [filer_code5], 
+    [AQ_Record].[entry_number5] AS [entry_number5], 
+    [AQ_Record].[first_associated_import_entry] AS [first_associated_import_entry], 
+    [AQ_Record].[next_associated_import_entry_1] AS [next_associated_import_entry_1], 
+    [AQ_Record].[next_associated_import_entry_2] AS [next_associated_import_entry_2], 
+    [AQ_Record].[next_associated_import_entry_3] AS [next_associated_import_entry_3], 
+    [AQ_Record].[next_associated_import_entry_4] AS [next_associated_import_entry_4], 
+    [AQ_Record].[filler5] AS [filler5], 
+    [AQ_Record].[file_date] AS [file_date]
+    FROM [dbo].[AQ_Record] AS [AQ_Record]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AS_Record" EntityType="Self.AS_Record" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AS_Record].[district_port_of_entry1] AS [district_port_of_entry1], 
+    [AS_Record].[filer_code1] AS [filer_code1], 
+    [AS_Record].[entry_number1] AS [entry_number1], 
+    [AS_Record].[surety_code] AS [surety_code], 
+    [AS_Record].[bond_number] AS [bond_number], 
+    [AS_Record].[bond_type] AS [bond_type], 
+    [AS_Record].[entry_type] AS [entry_type], 
+    [AS_Record].[release_summary_indicator] AS [release_summary_indicator], 
+    [AS_Record].[importer_of_record] AS [importer_of_record], 
+    [AS_Record].[entry_source] AS [entry_source], 
+    [AS_Record].[release_date] AS [release_date], 
+    [AS_Record].[value] AS [value], 
+    [AS_Record].[broker_reference_number] AS [broker_reference_number], 
+    [AS_Record].[cancel_date] AS [cancel_date], 
+    [AS_Record].[collection_status] AS [collection_status], 
+    [AS_Record].[district_port_of_entry2] AS [district_port_of_entry2], 
+    [AS_Record].[filer_code2] AS [filer_code2], 
+    [AS_Record].[entry_number2] AS [entry_number2], 
+    [AS_Record].[entry_date] AS [entry_date], 
+    [AS_Record].[record_status] AS [record_status], 
+    [AS_Record].[accelerated_drawback_indicator] AS [accelerated_drawback_indicator], 
+    [AS_Record].[possible_late_indicator] AS [possible_late_indicator], 
+    [AS_Record].[oga_indicator] AS [oga_indicator], 
+    [AS_Record].[entry_summary_date] AS [entry_summary_date], 
+    [AS_Record].[collection_date] AS [collection_date], 
+    [AS_Record].[warehouse_entry_summary_number] AS [warehouse_entry_summary_number], 
+    [AS_Record].[tentative_tib_close_date_liquidation_date] AS [tentative_tib_close_date_liquidation_date], 
+    [AS_Record].[estimated_duty] AS [estimated_duty], 
+    [AS_Record].[estimated_taxes] AS [estimated_taxes], 
+    [AS_Record].[district_port_of_entry3] AS [district_port_of_entry3], 
+    [AS_Record].[filer_code3] AS [filer_code3], 
+    [AS_Record].[entry_number3] AS [entry_number3], 
+    [AS_Record].[estimated_fee] AS [estimated_fee], 
+    [AS_Record].[estimated_antidumping_duty] AS [estimated_antidumping_duty], 
+    [AS_Record].[bonded_antidumping_duty] AS [bonded_antidumping_duty], 
+    [AS_Record].[estimated_countervailing_duty] AS [estimated_countervailing_duty], 
+    [AS_Record].[bonded_countervailing_duty] AS [bonded_countervailing_duty], 
+    [AS_Record].[recon_entry_nafta_issue_entry_type_09] AS [recon_entry_nafta_issue_entry_type_09], 
+    [AS_Record].[recon_entry_other_issue_entry_type_09] AS [recon_entry_other_issue_entry_type_09], 
+    [AS_Record].[pay_basis_indicator] AS [pay_basis_indicator], 
+    [AS_Record].[filler3] AS [filler3], 
+    [AS_Record].[district_port_of_entry4] AS [district_port_of_entry4], 
+    [AS_Record].[filer_code4] AS [filer_code4], 
+    [AS_Record].[entry_number4] AS [entry_number4], 
+    [AS_Record].[nafta_reconciliation_flag] AS [nafta_reconciliation_flag], 
+    [AS_Record].[nafta_reconciliation] AS [nafta_reconciliation], 
+    [AS_Record].[other_reconciliation_flag] AS [other_reconciliation_flag], 
+    [AS_Record].[other_reconciliation_entry] AS [other_reconciliation_entry], 
+    [AS_Record].[single_entry_bond_amount] AS [single_entry_bond_amount], 
+    [AS_Record].[single_entry_bond_producer_account_number] AS [single_entry_bond_producer_account_number], 
+    [AS_Record].[filler4] AS [filler4], 
+    [AS_Record].[district_port_of_entry5] AS [district_port_of_entry5], 
+    [AS_Record].[filer_code5] AS [filer_code5], 
+    [AS_Record].[entry_number5] AS [entry_number5], 
+    [AS_Record].[first_associated_import_entry] AS [first_associated_import_entry], 
+    [AS_Record].[next_associated_import_entry_1] AS [next_associated_import_entry_1], 
+    [AS_Record].[next_associated_import_entry_2] AS [next_associated_import_entry_2], 
+    [AS_Record].[next_associated_import_entry_3] AS [next_associated_import_entry_3], 
+    [AS_Record].[next_associated_import_entry_4] AS [next_associated_import_entry_4], 
+    [AS_Record].[filler5] AS [filler5], 
+    [AS_Record].[file_date] AS [file_date]
+    FROM [dbo].[AS_Record] AS [AS_Record]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BO_Record" EntityType="Self.BO_Record" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BO_Record].[surety_code] AS [surety_code], 
+    [BO_Record].[rdp] AS [rdp], 
+    [BO_Record].[bond_number] AS [bond_number], 
+    [BO_Record].[bond_activity_code] AS [bond_activity_code], 
+    [BO_Record].[bond_effective_date] AS [bond_effective_date], 
+    [BO_Record].[bond_termination_date] AS [bond_termination_date], 
+    [BO_Record].[bond_liability_amount] AS [bond_liability_amount], 
+    [BO_Record].[reconciliation_rider_effective_date] AS [reconciliation_rider_effective_date], 
+    [BO_Record].[filler1] AS [filler1], 
+    [BO_Record].[importer_number_line_1] AS [importer_number_line_1], 
+    [BO_Record].[importer_name] AS [importer_name], 
+    [BO_Record].[importer_address] AS [importer_address], 
+    [BO_Record].[filler2] AS [filler2], 
+    [BO_Record].[importer_address_line_2] AS [importer_address_line_2], 
+    [BO_Record].[importer_city] AS [importer_city], 
+    [BO_Record].[importer_state] AS [importer_state], 
+    [BO_Record].[importer_5digit_zip] AS [importer_5digit_zip], 
+    [BO_Record].[importer_4digit_zip] AS [importer_4digit_zip], 
+    [BO_Record].[filler3] AS [filler3], 
+    [BO_Record].[file_date] AS [file_date]
+    FROM [dbo].[BO_Record] AS [BO_Record]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PortCode" EntityType="Self.PortCode" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PortCode].[PortCodeId] AS [PortCodeId], 
+    [PortCode].[Name] AS [Name]
+    FROM [dbo].[PortCode] AS [PortCode]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vType3EntriesWithBO" EntityType="Self.vType3EntriesWithBO" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vType3EntriesWithBO].[district_port_of_entry1] AS [district_port_of_entry1], 
+    [vType3EntriesWithBO].[filer_code1] AS [filer_code1], 
+    [vType3EntriesWithBO].[entry_number1] AS [entry_number1], 
+    [vType3EntriesWithBO].[surety_code] AS [surety_code], 
+    [vType3EntriesWithBO].[bond_number] AS [bond_number], 
+    [vType3EntriesWithBO].[bond_type] AS [bond_type], 
+    [vType3EntriesWithBO].[entry_type] AS [entry_type], 
+    [vType3EntriesWithBO].[release_summary_indicator] AS [release_summary_indicator], 
+    [vType3EntriesWithBO].[importer_of_record] AS [importer_of_record], 
+    [vType3EntriesWithBO].[entry_source] AS [entry_source], 
+    [vType3EntriesWithBO].[release_date] AS [release_date], 
+    [vType3EntriesWithBO].[value] AS [value], 
+    [vType3EntriesWithBO].[broker_reference_number] AS [broker_reference_number], 
+    [vType3EntriesWithBO].[cancel_date] AS [cancel_date], 
+    [vType3EntriesWithBO].[collection_status] AS [collection_status], 
+    [vType3EntriesWithBO].[district_port_of_entry2] AS [district_port_of_entry2], 
+    [vType3EntriesWithBO].[filer_code2] AS [filer_code2], 
+    [vType3EntriesWithBO].[entry_number2] AS [entry_number2], 
+    [vType3EntriesWithBO].[entry_date] AS [entry_date], 
+    [vType3EntriesWithBO].[record_status] AS [record_status], 
+    [vType3EntriesWithBO].[accelerated_drawback_indicator] AS [accelerated_drawback_indicator], 
+    [vType3EntriesWithBO].[possible_late_indicator] AS [possible_late_indicator], 
+    [vType3EntriesWithBO].[oga_indicator] AS [oga_indicator], 
+    [vType3EntriesWithBO].[entry_summary_date] AS [entry_summary_date], 
+    [vType3EntriesWithBO].[collection_date] AS [collection_date], 
+    [vType3EntriesWithBO].[warehouse_entry_summary_number] AS [warehouse_entry_summary_number], 
+    [vType3EntriesWithBO].[tentative_tib_close_date_liquidation_date] AS [tentative_tib_close_date_liquidation_date], 
+    [vType3EntriesWithBO].[estimated_duty] AS [estimated_duty], 
+    [vType3EntriesWithBO].[estimated_taxes] AS [estimated_taxes], 
+    [vType3EntriesWithBO].[district_port_of_entry3] AS [district_port_of_entry3], 
+    [vType3EntriesWithBO].[filer_code3] AS [filer_code3], 
+    [vType3EntriesWithBO].[entry_number3] AS [entry_number3], 
+    [vType3EntriesWithBO].[estimated_fee] AS [estimated_fee], 
+    [vType3EntriesWithBO].[estimated_antidumping_duty] AS [estimated_antidumping_duty], 
+    [vType3EntriesWithBO].[bonded_antidumping_duty] AS [bonded_antidumping_duty], 
+    [vType3EntriesWithBO].[estimated_countervailing_duty] AS [estimated_countervailing_duty], 
+    [vType3EntriesWithBO].[bonded_countervailing_duty] AS [bonded_countervailing_duty], 
+    [vType3EntriesWithBO].[recon_entry_nafta_issue_entry_type_09] AS [recon_entry_nafta_issue_entry_type_09], 
+    [vType3EntriesWithBO].[recon_entry_other_issue_entry_type_09] AS [recon_entry_other_issue_entry_type_09], 
+    [vType3EntriesWithBO].[pay_basis_indicator] AS [pay_basis_indicator], 
+    [vType3EntriesWithBO].[filler3] AS [filler3], 
+    [vType3EntriesWithBO].[district_port_of_entry4] AS [district_port_of_entry4], 
+    [vType3EntriesWithBO].[filer_code4] AS [filer_code4], 
+    [vType3EntriesWithBO].[entry_number4] AS [entry_number4], 
+    [vType3EntriesWithBO].[nafta_reconciliation_flag] AS [nafta_reconciliation_flag], 
+    [vType3EntriesWithBO].[nafta_reconciliation] AS [nafta_reconciliation], 
+    [vType3EntriesWithBO].[other_reconciliation_flag] AS [other_reconciliation_flag], 
+    [vType3EntriesWithBO].[other_reconciliation_entry] AS [other_reconciliation_entry], 
+    [vType3EntriesWithBO].[single_entry_bond_amount] AS [single_entry_bond_amount], 
+    [vType3EntriesWithBO].[single_entry_bond_producer_account_number] AS [single_entry_bond_producer_account_number], 
+    [vType3EntriesWithBO].[filler4] AS [filler4], 
+    [vType3EntriesWithBO].[district_port_of_entry5] AS [district_port_of_entry5], 
+    [vType3EntriesWithBO].[filer_code5] AS [filer_code5], 
+    [vType3EntriesWithBO].[entry_number5] AS [entry_number5], 
+    [vType3EntriesWithBO].[first_associated_import_entry] AS [first_associated_import_entry], 
+    [vType3EntriesWithBO].[next_associated_import_entry_1] AS [next_associated_import_entry_1], 
+    [vType3EntriesWithBO].[next_associated_import_entry_2] AS [next_associated_import_entry_2], 
+    [vType3EntriesWithBO].[next_associated_import_entry_3] AS [next_associated_import_entry_3], 
+    [vType3EntriesWithBO].[next_associated_import_entry_4] AS [next_associated_import_entry_4], 
+    [vType3EntriesWithBO].[filler5] AS [filler5], 
+    [vType3EntriesWithBO].[file_date] AS [file_date], 
+    [vType3EntriesWithBO].[importer_name] AS [importer_name], 
+    [vType3EntriesWithBO].[bond_effective_date] AS [bond_effective_date], 
+    [vType3EntriesWithBO].[bond_termination_date] AS [bond_termination_date], 
+    [vType3EntriesWithBO].[bond_liability_amount] AS [bond_liability_amount], 
+    [vType3EntriesWithBO].[importer_city] AS [importer_city], 
+    [vType3EntriesWithBO].[importer_state] AS [importer_state], 
+    [vType3EntriesWithBO].[importer_5digit_zip] AS [importer_5digit_zip], 
+    [vType3EntriesWithBO].[importer_4digit_zip] AS [importer_4digit_zip], 
+    [vType3EntriesWithBO].[rdp] AS [rdp], 
+    [vType3EntriesWithBO].[bond_activity_code] AS [bond_activity_code], 
+    [vType3EntriesWithBO].[Expr1] AS [Expr1], 
+    [vType3EntriesWithBO].[Expr2] AS [Expr2]
+    FROM [dbo].[vType3EntriesWithBO] AS [vType3EntriesWithBO]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
