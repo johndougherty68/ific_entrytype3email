@@ -37,7 +37,7 @@ namespace EntryType3Email
         cbpmqdbEntities db = new cbpmqdbEntities();
         //Find AS records with an entry type of 3 
 
-        var q = from p in db.vType3EntriesWithBO where p.file_date >= dateFrom select p;
+        var q = from p in db.vType3EntriesWithBO where p.file_date >= dateFrom && p.entry_number1 == "12092076" select p;
 
         if (singleBondToCheck != "")
         {
