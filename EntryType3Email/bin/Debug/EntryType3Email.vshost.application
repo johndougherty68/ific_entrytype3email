@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="EntryType3Email.exe.manifest" size="6724">
+    <dependentAssembly dependencyType="install" codebase="EntryType3Email.exe.manifest" size="6735">
       <assemblyIdentity name="EntryType3Email.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>54220zYqo6VJqKxwhjMCdZhWo5X9V2lE7TzfxXuyyRs=</dsig:DigestValue>
+        <dsig:DigestValue>Q9naa0+nORBNDailNjc6FhKMLqNqX1C6Rm3QBfsCUE8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

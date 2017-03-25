@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="cbpmqdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="cbpmqdbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="ASAQEmail">
     <Key>
       <PropertyRef Name="EmailID" />
@@ -20,6 +20,14 @@
     </Key>
     <Property Name="BondTypeId" Type="Byte" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ClassCode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassCode1" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="EntryType">
     <Key>
@@ -200,26 +208,6 @@
     <Property Name="PortCodeId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="cbpmqdbEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmail" />
-    <EntitySet Name="BondTypes" EntityType="Self.BondType" />
-    <EntitySet Name="EntryTypes" EntityType="Self.EntryType" />
-    <EntitySet Name="FilerCodes" EntityType="Self.FilerCode" />
-    <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" />
-    <EntitySet Name="AS_Record" EntityType="Self.AS_Record" />
-    <EntitySet Name="BO_Record" EntityType="Self.BO_Record" />
-    <EntitySet Name="PortCodes" EntityType="Self.PortCode" />
-    <EntitySet Name="ClassCodes" EntityType="cbpmqdbModel.ClassCode" />
-    <EntitySet Name="vType3EntriesWithBO" EntityType="cbpmqdbModel.vType3EntriesWithBO" />
-  </EntityContainer>
-  <EntityType Name="ClassCode">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ClassCode1" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="vType3EntriesWithBO">
     <Key>
       <PropertyRef Name="file_date" />
@@ -299,4 +287,16 @@
     <Property Name="Expr1" Type="Byte" />
     <Property Name="Expr2" Type="DateTime" Nullable="false" Precision="0" />
   </EntityType>
+  <EntityContainer Name="cbpmqdbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmail" />
+    <EntitySet Name="BondTypes" EntityType="Self.BondType" />
+    <EntitySet Name="ClassCodes" EntityType="Self.ClassCode" />
+    <EntitySet Name="EntryTypes" EntityType="Self.EntryType" />
+    <EntitySet Name="FilerCodes" EntityType="Self.FilerCode" />
+    <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" />
+    <EntitySet Name="AS_Record" EntityType="Self.AS_Record" />
+    <EntitySet Name="BO_Record" EntityType="Self.BO_Record" />
+    <EntitySet Name="PortCodes" EntityType="Self.PortCode" />
+    <EntitySet Name="vType3EntriesWithBO" EntityType="Self.vType3EntriesWithBO" />
+  </EntityContainer>
 </Schema>

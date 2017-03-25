@@ -1,31 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="cbpmqdbModelStoreContainer" CdmEntityContainer="cbpmqdbEntities">
+  <EntityContainerMapping StorageEntityContainer="cbpmqdbModel1StoreContainer" CdmEntityContainer="cbpmqdbEntities1">
     <EntitySetMapping Name="ASAQEmails">
-      <EntityTypeMapping TypeName="cbpmqdbModel.ASAQEmail">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.ASAQEmail">
         <MappingFragment StoreEntitySet="ASAQEmails">
-          <ScalarProperty Name="EntryNumber" ColumnName="EntryNumber" />
-          <ScalarProperty Name="FileDate" ColumnName="FileDate" />
-          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
           <ScalarProperty Name="EmailID" ColumnName="EmailID" />
           <ScalarProperty Name="Importer" ColumnName="Importer" />
           <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
           <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
           <ScalarProperty Name="EmailSentDate" ColumnName="EmailSentDate" />
           <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="FileDate" ColumnName="FileDate" />
+          <ScalarProperty Name="EntryNumber" ColumnName="EntryNumber" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BondTypes">
-      <EntityTypeMapping TypeName="cbpmqdbModel.BondType">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.BondType">
         <MappingFragment StoreEntitySet="BondTypes">
           <ScalarProperty Name="BondTypeId" ColumnName="BondTypeId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ClassCodes">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.ClassCode">
+        <MappingFragment StoreEntitySet="ClassCode">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ClassCode1" ColumnName="ClassCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="EntryTypes">
-      <EntityTypeMapping TypeName="cbpmqdbModel.EntryType">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.EntryType">
         <MappingFragment StoreEntitySet="EntryType">
           <ScalarProperty Name="EntryTypeId" ColumnName="EntryTypeId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -33,7 +42,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FilerCodes">
-      <EntityTypeMapping TypeName="cbpmqdbModel.FilerCode">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.FilerCode">
         <MappingFragment StoreEntitySet="FilerCodes">
           <ScalarProperty Name="FilerCode1" ColumnName="FilerCode" />
           <ScalarProperty Name="FilerName" ColumnName="FilerName" />
@@ -41,7 +50,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AQ_Record">
-      <EntityTypeMapping TypeName="cbpmqdbModel.AQ_Record">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.AQ_Record">
         <MappingFragment StoreEntitySet="AQ_Record">
           <ScalarProperty Name="district_port_of_entry1" ColumnName="district_port_of_entry1" />
           <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
@@ -108,7 +117,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AS_Record">
-      <EntityTypeMapping TypeName="cbpmqdbModel.AS_Record">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.AS_Record">
         <MappingFragment StoreEntitySet="AS_Record">
           <ScalarProperty Name="district_port_of_entry1" ColumnName="district_port_of_entry1" />
           <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
@@ -175,7 +184,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BO_Record">
-      <EntityTypeMapping TypeName="cbpmqdbModel.BO_Record">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.BO_Record">
         <MappingFragment StoreEntitySet="BO_Record">
           <ScalarProperty Name="surety_code" ColumnName="surety_code" />
           <ScalarProperty Name="rdp" ColumnName="rdp" />
@@ -201,98 +210,89 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PortCodes">
-      <EntityTypeMapping TypeName="cbpmqdbModel.PortCode">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.PortCode">
         <MappingFragment StoreEntitySet="PortCode">
           <ScalarProperty Name="PortCodeId" ColumnName="PortCodeId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ClassCodes">
-      <EntityTypeMapping TypeName="cbpmqdbModel.ClassCode">
-        <MappingFragment StoreEntitySet="ClassCode">
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ClassCode1" ColumnName="ClassCode" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="vType3EntriesWithBO">
-      <EntityTypeMapping TypeName="cbpmqdbModel.vType3EntriesWithBO">
+      <EntityTypeMapping TypeName="cbpmqdbModel1.vType3EntriesWithBO">
         <MappingFragment StoreEntitySet="vType3EntriesWithBO">
-          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
-          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
-          <ScalarProperty Name="bond_activity_code" ColumnName="bond_activity_code" />
-          <ScalarProperty Name="rdp" ColumnName="rdp" />
-          <ScalarProperty Name="importer_4digit_zip" ColumnName="importer_4digit_zip" />
-          <ScalarProperty Name="importer_5digit_zip" ColumnName="importer_5digit_zip" />
-          <ScalarProperty Name="importer_state" ColumnName="importer_state" />
-          <ScalarProperty Name="importer_city" ColumnName="importer_city" />
-          <ScalarProperty Name="bond_liability_amount" ColumnName="bond_liability_amount" />
-          <ScalarProperty Name="bond_termination_date" ColumnName="bond_termination_date" />
-          <ScalarProperty Name="bond_effective_date" ColumnName="bond_effective_date" />
-          <ScalarProperty Name="importer_name" ColumnName="importer_name" />
-          <ScalarProperty Name="file_date" ColumnName="file_date" />
-          <ScalarProperty Name="filler5" ColumnName="filler5" />
-          <ScalarProperty Name="next_associated_import_entry_4" ColumnName="next_associated_import_entry_4" />
-          <ScalarProperty Name="next_associated_import_entry_3" ColumnName="next_associated_import_entry_3" />
-          <ScalarProperty Name="next_associated_import_entry_2" ColumnName="next_associated_import_entry_2" />
-          <ScalarProperty Name="next_associated_import_entry_1" ColumnName="next_associated_import_entry_1" />
-          <ScalarProperty Name="first_associated_import_entry" ColumnName="first_associated_import_entry" />
-          <ScalarProperty Name="entry_number5" ColumnName="entry_number5" />
-          <ScalarProperty Name="filer_code5" ColumnName="filer_code5" />
-          <ScalarProperty Name="district_port_of_entry5" ColumnName="district_port_of_entry5" />
-          <ScalarProperty Name="filler4" ColumnName="filler4" />
-          <ScalarProperty Name="single_entry_bond_producer_account_number" ColumnName="single_entry_bond_producer_account_number" />
-          <ScalarProperty Name="single_entry_bond_amount" ColumnName="single_entry_bond_amount" />
-          <ScalarProperty Name="other_reconciliation_entry" ColumnName="other_reconciliation_entry" />
-          <ScalarProperty Name="other_reconciliation_flag" ColumnName="other_reconciliation_flag" />
-          <ScalarProperty Name="nafta_reconciliation" ColumnName="nafta_reconciliation" />
-          <ScalarProperty Name="nafta_reconciliation_flag" ColumnName="nafta_reconciliation_flag" />
-          <ScalarProperty Name="entry_number4" ColumnName="entry_number4" />
-          <ScalarProperty Name="filer_code4" ColumnName="filer_code4" />
-          <ScalarProperty Name="district_port_of_entry4" ColumnName="district_port_of_entry4" />
-          <ScalarProperty Name="filler3" ColumnName="filler3" />
-          <ScalarProperty Name="pay_basis_indicator" ColumnName="pay_basis_indicator" />
-          <ScalarProperty Name="recon_entry_other_issue_entry_type_09" ColumnName="recon_entry_other_issue_entry_type_09" />
-          <ScalarProperty Name="recon_entry_nafta_issue_entry_type_09" ColumnName="recon_entry_nafta_issue_entry_type_09" />
-          <ScalarProperty Name="bonded_countervailing_duty" ColumnName="bonded_countervailing_duty" />
-          <ScalarProperty Name="estimated_countervailing_duty" ColumnName="estimated_countervailing_duty" />
-          <ScalarProperty Name="bonded_antidumping_duty" ColumnName="bonded_antidumping_duty" />
-          <ScalarProperty Name="estimated_antidumping_duty" ColumnName="estimated_antidumping_duty" />
-          <ScalarProperty Name="estimated_fee" ColumnName="estimated_fee" />
-          <ScalarProperty Name="entry_number3" ColumnName="entry_number3" />
-          <ScalarProperty Name="filer_code3" ColumnName="filer_code3" />
-          <ScalarProperty Name="district_port_of_entry3" ColumnName="district_port_of_entry3" />
-          <ScalarProperty Name="estimated_taxes" ColumnName="estimated_taxes" />
-          <ScalarProperty Name="estimated_duty" ColumnName="estimated_duty" />
-          <ScalarProperty Name="tentative_tib_close_date_liquidation_date" ColumnName="tentative_tib_close_date_liquidation_date" />
-          <ScalarProperty Name="warehouse_entry_summary_number" ColumnName="warehouse_entry_summary_number" />
-          <ScalarProperty Name="collection_date" ColumnName="collection_date" />
-          <ScalarProperty Name="entry_summary_date" ColumnName="entry_summary_date" />
-          <ScalarProperty Name="oga_indicator" ColumnName="oga_indicator" />
-          <ScalarProperty Name="possible_late_indicator" ColumnName="possible_late_indicator" />
-          <ScalarProperty Name="accelerated_drawback_indicator" ColumnName="accelerated_drawback_indicator" />
-          <ScalarProperty Name="record_status" ColumnName="record_status" />
-          <ScalarProperty Name="entry_date" ColumnName="entry_date" />
-          <ScalarProperty Name="entry_number2" ColumnName="entry_number2" />
-          <ScalarProperty Name="filer_code2" ColumnName="filer_code2" />
-          <ScalarProperty Name="district_port_of_entry2" ColumnName="district_port_of_entry2" />
-          <ScalarProperty Name="collection_status" ColumnName="collection_status" />
-          <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
-          <ScalarProperty Name="broker_reference_number" ColumnName="broker_reference_number" />
-          <ScalarProperty Name="value" ColumnName="value" />
-          <ScalarProperty Name="release_date" ColumnName="release_date" />
-          <ScalarProperty Name="entry_source" ColumnName="entry_source" />
-          <ScalarProperty Name="importer_of_record" ColumnName="importer_of_record" />
-          <ScalarProperty Name="release_summary_indicator" ColumnName="release_summary_indicator" />
-          <ScalarProperty Name="entry_type" ColumnName="entry_type" />
-          <ScalarProperty Name="bond_type" ColumnName="bond_type" />
-          <ScalarProperty Name="bond_number" ColumnName="bond_number" />
-          <ScalarProperty Name="surety_code" ColumnName="surety_code" />
-          <ScalarProperty Name="entry_number1" ColumnName="entry_number1" />
-          <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
           <ScalarProperty Name="district_port_of_entry1" ColumnName="district_port_of_entry1" />
+          <ScalarProperty Name="filer_code1" ColumnName="filer_code1" />
+          <ScalarProperty Name="entry_number1" ColumnName="entry_number1" />
+          <ScalarProperty Name="surety_code" ColumnName="surety_code" />
+          <ScalarProperty Name="bond_number" ColumnName="bond_number" />
+          <ScalarProperty Name="bond_type" ColumnName="bond_type" />
+          <ScalarProperty Name="entry_type" ColumnName="entry_type" />
+          <ScalarProperty Name="release_summary_indicator" ColumnName="release_summary_indicator" />
+          <ScalarProperty Name="importer_of_record" ColumnName="importer_of_record" />
+          <ScalarProperty Name="entry_source" ColumnName="entry_source" />
+          <ScalarProperty Name="release_date" ColumnName="release_date" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="broker_reference_number" ColumnName="broker_reference_number" />
+          <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
+          <ScalarProperty Name="collection_status" ColumnName="collection_status" />
+          <ScalarProperty Name="district_port_of_entry2" ColumnName="district_port_of_entry2" />
+          <ScalarProperty Name="filer_code2" ColumnName="filer_code2" />
+          <ScalarProperty Name="entry_number2" ColumnName="entry_number2" />
+          <ScalarProperty Name="entry_date" ColumnName="entry_date" />
+          <ScalarProperty Name="record_status" ColumnName="record_status" />
+          <ScalarProperty Name="accelerated_drawback_indicator" ColumnName="accelerated_drawback_indicator" />
+          <ScalarProperty Name="possible_late_indicator" ColumnName="possible_late_indicator" />
+          <ScalarProperty Name="oga_indicator" ColumnName="oga_indicator" />
+          <ScalarProperty Name="entry_summary_date" ColumnName="entry_summary_date" />
+          <ScalarProperty Name="collection_date" ColumnName="collection_date" />
+          <ScalarProperty Name="warehouse_entry_summary_number" ColumnName="warehouse_entry_summary_number" />
+          <ScalarProperty Name="tentative_tib_close_date_liquidation_date" ColumnName="tentative_tib_close_date_liquidation_date" />
+          <ScalarProperty Name="estimated_duty" ColumnName="estimated_duty" />
+          <ScalarProperty Name="estimated_taxes" ColumnName="estimated_taxes" />
+          <ScalarProperty Name="district_port_of_entry3" ColumnName="district_port_of_entry3" />
+          <ScalarProperty Name="filer_code3" ColumnName="filer_code3" />
+          <ScalarProperty Name="entry_number3" ColumnName="entry_number3" />
+          <ScalarProperty Name="estimated_fee" ColumnName="estimated_fee" />
+          <ScalarProperty Name="estimated_antidumping_duty" ColumnName="estimated_antidumping_duty" />
+          <ScalarProperty Name="bonded_antidumping_duty" ColumnName="bonded_antidumping_duty" />
+          <ScalarProperty Name="estimated_countervailing_duty" ColumnName="estimated_countervailing_duty" />
+          <ScalarProperty Name="bonded_countervailing_duty" ColumnName="bonded_countervailing_duty" />
+          <ScalarProperty Name="recon_entry_nafta_issue_entry_type_09" ColumnName="recon_entry_nafta_issue_entry_type_09" />
+          <ScalarProperty Name="recon_entry_other_issue_entry_type_09" ColumnName="recon_entry_other_issue_entry_type_09" />
+          <ScalarProperty Name="pay_basis_indicator" ColumnName="pay_basis_indicator" />
+          <ScalarProperty Name="filler3" ColumnName="filler3" />
+          <ScalarProperty Name="district_port_of_entry4" ColumnName="district_port_of_entry4" />
+          <ScalarProperty Name="filer_code4" ColumnName="filer_code4" />
+          <ScalarProperty Name="entry_number4" ColumnName="entry_number4" />
+          <ScalarProperty Name="nafta_reconciliation_flag" ColumnName="nafta_reconciliation_flag" />
+          <ScalarProperty Name="nafta_reconciliation" ColumnName="nafta_reconciliation" />
+          <ScalarProperty Name="other_reconciliation_flag" ColumnName="other_reconciliation_flag" />
+          <ScalarProperty Name="other_reconciliation_entry" ColumnName="other_reconciliation_entry" />
+          <ScalarProperty Name="single_entry_bond_amount" ColumnName="single_entry_bond_amount" />
+          <ScalarProperty Name="single_entry_bond_producer_account_number" ColumnName="single_entry_bond_producer_account_number" />
+          <ScalarProperty Name="filler4" ColumnName="filler4" />
+          <ScalarProperty Name="district_port_of_entry5" ColumnName="district_port_of_entry5" />
+          <ScalarProperty Name="filer_code5" ColumnName="filer_code5" />
+          <ScalarProperty Name="entry_number5" ColumnName="entry_number5" />
+          <ScalarProperty Name="first_associated_import_entry" ColumnName="first_associated_import_entry" />
+          <ScalarProperty Name="next_associated_import_entry_1" ColumnName="next_associated_import_entry_1" />
+          <ScalarProperty Name="next_associated_import_entry_2" ColumnName="next_associated_import_entry_2" />
+          <ScalarProperty Name="next_associated_import_entry_3" ColumnName="next_associated_import_entry_3" />
+          <ScalarProperty Name="next_associated_import_entry_4" ColumnName="next_associated_import_entry_4" />
+          <ScalarProperty Name="filler5" ColumnName="filler5" />
+          <ScalarProperty Name="file_date" ColumnName="file_date" />
+          <ScalarProperty Name="importer_name" ColumnName="importer_name" />
+          <ScalarProperty Name="bond_effective_date" ColumnName="bond_effective_date" />
+          <ScalarProperty Name="bond_termination_date" ColumnName="bond_termination_date" />
+          <ScalarProperty Name="bond_liability_amount" ColumnName="bond_liability_amount" />
+          <ScalarProperty Name="importer_city" ColumnName="importer_city" />
+          <ScalarProperty Name="importer_state" ColumnName="importer_state" />
+          <ScalarProperty Name="importer_5digit_zip" ColumnName="importer_5digit_zip" />
+          <ScalarProperty Name="importer_4digit_zip" ColumnName="importer_4digit_zip" />
+          <ScalarProperty Name="rdp" ColumnName="rdp" />
+          <ScalarProperty Name="bond_activity_code" ColumnName="bond_activity_code" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

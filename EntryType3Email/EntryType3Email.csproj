@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -87,51 +87,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AQ_Record.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ASAQEmail.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AS_Record.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="BondType.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="BO_Record.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CBPMQDB.Context.cs">
+    <Compile Include="CBPMQDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CBPMQDB.Context.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CBPMQDB.cs">
+    <Compile Include="CBPMQDBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CBPMQDB.Designer.cs">
+    <Compile Include="CBPMQDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CBPMQDB.edmx</DependentUpon>
+      <DependentUpon>CBPMQDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="ClassCode.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EntryType.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FilerCode.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PortCode.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vType3EntriesWithBO.cs">
-      <DependentUpon>CBPMQDB.tt</DependentUpon>
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -139,25 +139,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="CBPMQDB.Context.tt">
+    <Content Include="CBPMQDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CBPMQDB.edmx</DependentUpon>
-      <LastGenOutput>CBPMQDB.Context.cs</LastGenOutput>
+      <DependentUpon>CBPMQDBModel.edmx</DependentUpon>
+      <LastGenOutput>CBPMQDBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="CBPMQDB.tt">
+    <Content Include="CBPMQDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CBPMQDB.edmx</DependentUpon>
-      <LastGenOutput>CBPMQDB.cs</LastGenOutput>
+      <DependentUpon>CBPMQDBModel.edmx</DependentUpon>
+      <LastGenOutput>CBPMQDBModel.cs</LastGenOutput>
     </Content>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="CBPMQDB.edmx">
+    <EntityDeploy Include="CBPMQDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CBPMQDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>CBPMQDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CBPMQDB.edmx.diagram">
-      <DependentUpon>CBPMQDB.edmx</DependentUpon>
+    <None Include="CBPMQDBModel.edmx.diagram">
+      <DependentUpon>CBPMQDBModel.edmx</DependentUpon>
     </None>
     <None Include="EntryType3Email_TemporaryKey.pfx" />
     <None Include="NLog.xsd">
