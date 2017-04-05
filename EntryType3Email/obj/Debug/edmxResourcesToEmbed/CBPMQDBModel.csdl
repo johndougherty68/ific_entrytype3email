@@ -208,11 +208,24 @@
     <Property Name="PortCodeId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
+  <EntityContainer Name="cbpmqdbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmail" />
+    <EntitySet Name="BondTypes" EntityType="Self.BondType" />
+    <EntitySet Name="ClassCodes" EntityType="Self.ClassCode" />
+    <EntitySet Name="EntryTypes" EntityType="Self.EntryType" />
+    <EntitySet Name="FilerCodes" EntityType="Self.FilerCode" />
+    <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" />
+    <EntitySet Name="AS_Record" EntityType="Self.AS_Record" />
+    <EntitySet Name="BO_Record" EntityType="Self.BO_Record" />
+    <EntitySet Name="PortCodes" EntityType="Self.PortCode" />
+    <EntitySet Name="vType3EntriesWithBO" EntityType="cbpmqdbModel1.vType3EntriesWithBO" />
+  </EntityContainer>
   <EntityType Name="vType3EntriesWithBO">
     <Key>
+      <PropertyRef Name="BO_File_Date" />
       <PropertyRef Name="file_date" />
-      <PropertyRef Name="Expr2" />
     </Key>
+    <Property Name="BO_File_Date" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="district_port_of_entry1" Type="Decimal" Precision="4" Scale="0" />
     <Property Name="filer_code1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="entry_number1" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
@@ -284,19 +297,5 @@
     <Property Name="importer_4digit_zip" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
     <Property Name="rdp" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
     <Property Name="bond_activity_code" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
-    <Property Name="Expr1" Type="Byte" />
-    <Property Name="Expr2" Type="DateTime" Nullable="false" Precision="0" />
   </EntityType>
-  <EntityContainer Name="cbpmqdbEntities1" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmail" />
-    <EntitySet Name="BondTypes" EntityType="Self.BondType" />
-    <EntitySet Name="ClassCodes" EntityType="Self.ClassCode" />
-    <EntitySet Name="EntryTypes" EntityType="Self.EntryType" />
-    <EntitySet Name="FilerCodes" EntityType="Self.FilerCode" />
-    <EntitySet Name="AQ_Record" EntityType="Self.AQ_Record" />
-    <EntitySet Name="AS_Record" EntityType="Self.AS_Record" />
-    <EntitySet Name="BO_Record" EntityType="Self.BO_Record" />
-    <EntitySet Name="PortCodes" EntityType="Self.PortCode" />
-    <EntitySet Name="vType3EntriesWithBO" EntityType="Self.vType3EntriesWithBO" />
-  </EntityContainer>
 </Schema>

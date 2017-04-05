@@ -31,9 +31,9 @@ namespace EntryType3Email
         {
             try
             {
-                DateTime dateFrom = DateTime.Now.AddDays(numDays * -1);
 
                 config();
+                DateTime dateFrom = DateTime.Now.AddDays(numDays * -1);
                 cbpmqdbEntities1 db = new cbpmqdbEntities1();
                 //Find AS records with an entry type of 3 
 
@@ -116,7 +116,7 @@ namespace EntryType3Email
 
         private static void config()
         {
-            string appConfigLoc = baseDir + "app.config";
+            string appConfigLoc = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
             if (!File.Exists(appConfigLoc))
             {
                 throw new FileNotFoundException("Config file " + appConfigLoc + " not found. Exiting.");

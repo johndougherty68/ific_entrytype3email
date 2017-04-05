@@ -220,9 +220,10 @@ warning 6002: The table/view 'cbpmqdb.dbo.PortCode' does not have a primary key 
 warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="vType3EntriesWithBO">
     <Key>
+      <PropertyRef Name="BO_File_Date" />
       <PropertyRef Name="file_date" />
-      <PropertyRef Name="Expr2" />
     </Key>
+    <Property Name="BO_File_Date" Type="smalldatetime" Nullable="false" />
     <Property Name="district_port_of_entry1" Type="numeric" Precision="4" Scale="0" />
     <Property Name="filer_code1" Type="nvarchar" MaxLength="3" />
     <Property Name="entry_number1" Type="nvarchar" MaxLength="9" />
@@ -294,8 +295,6 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
     <Property Name="importer_4digit_zip" Type="nchar" MaxLength="4" />
     <Property Name="rdp" Type="nchar" MaxLength="5" />
     <Property Name="bond_activity_code" Type="nchar" MaxLength="3" />
-    <Property Name="Expr1" Type="tinyint" />
-    <Property Name="Expr2" Type="smalldatetime" Nullable="false" />
   </EntityType>
   <EntityContainer Name="cbpmqdbModel1StoreContainer">
     <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmails" Schema="dbo" store:Type="Tables" />
@@ -465,6 +464,7 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
     </EntitySet>
     <EntitySet Name="vType3EntriesWithBO" EntityType="Self.vType3EntriesWithBO" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
+    [vType3EntriesWithBO].[BO_File_Date] AS [BO_File_Date], 
     [vType3EntriesWithBO].[district_port_of_entry1] AS [district_port_of_entry1], 
     [vType3EntriesWithBO].[filer_code1] AS [filer_code1], 
     [vType3EntriesWithBO].[entry_number1] AS [entry_number1], 
@@ -535,9 +535,7 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
     [vType3EntriesWithBO].[importer_5digit_zip] AS [importer_5digit_zip], 
     [vType3EntriesWithBO].[importer_4digit_zip] AS [importer_4digit_zip], 
     [vType3EntriesWithBO].[rdp] AS [rdp], 
-    [vType3EntriesWithBO].[bond_activity_code] AS [bond_activity_code], 
-    [vType3EntriesWithBO].[Expr1] AS [Expr1], 
-    [vType3EntriesWithBO].[Expr2] AS [Expr2]
+    [vType3EntriesWithBO].[bond_activity_code] AS [bond_activity_code]
     FROM [dbo].[vType3EntriesWithBO] AS [vType3EntriesWithBO]</DefiningQuery>
     </EntitySet>
   </EntityContainer>

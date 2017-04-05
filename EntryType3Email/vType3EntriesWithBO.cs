@@ -14,6 +14,7 @@ namespace EntryType3Email
     
     public partial class vType3EntriesWithBO
     {
+        public System.DateTime BO_File_Date { get; set; }
         public Nullable<decimal> district_port_of_entry1 { get; set; }
         public string filer_code1 { get; set; }
         public string entry_number1 { get; set; }
@@ -85,7 +86,5 @@ namespace EntryType3Email
         public string importer_4digit_zip { get; set; }
         public string rdp { get; set; }
         public string bond_activity_code { get; set; }
-        public Nullable<byte> Expr1 { get; set; }
-        public System.DateTime Expr2 { get; set; }
     }
 }
