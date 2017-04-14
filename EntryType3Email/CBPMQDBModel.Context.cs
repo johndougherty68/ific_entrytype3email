@@ -12,6 +12,8 @@ namespace EntryType3Email
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class cbpmqdbEntities1 : DbContext
     {
@@ -35,5 +37,14 @@ namespace EntryType3Email
         public virtual DbSet<BO_Record> BO_Record { get; set; }
         public virtual DbSet<PortCode> PortCodes { get; set; }
         public virtual DbSet<vType3EntriesWithBO> vType3EntriesWithBO { get; set; }
+    
+        public virtual ObjectResult<spGetType3Entries_Result> spGetType3Entries(Nullable<System.DateTime> fromDate)
+        {
+            var fromDateParameter = fromDate.HasValue ?
+                new ObjectParameter("fromDate", fromDate) :
+                new ObjectParameter("fromDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetType3Entries_Result>("spGetType3Entries", fromDateParameter);
+        }
     }
 }

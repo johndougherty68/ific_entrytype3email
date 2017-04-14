@@ -296,6 +296,9 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
     <Property Name="rdp" Type="nchar" MaxLength="5" />
     <Property Name="bond_activity_code" Type="nchar" MaxLength="3" />
   </EntityType>
+  <Function Name="spGetType3Entries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="date" Mode="In" />
+  </Function>
   <EntityContainer Name="cbpmqdbModel1StoreContainer">
     <EntitySet Name="ASAQEmails" EntityType="Self.ASAQEmails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BondTypes" EntityType="Self.BondTypes" Schema="dbo" store:Type="Tables" />

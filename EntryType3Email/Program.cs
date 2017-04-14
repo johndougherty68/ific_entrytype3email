@@ -37,70 +37,73 @@ namespace EntryType3Email
                 cbpmqdbEntities1 db = new cbpmqdbEntities1();
                 //Find AS records with an entry type of 3 
 
-                var q = from p in db.vType3EntriesWithBO where p.file_date >= dateFrom select p;
+                var asr = from p in db.AS_Record where p.file_date >= dateFrom
+                          && p.entry_type==3
+                          select p;
+                //if (singleBondToCheck != "")
+                //{
+                //    q = (from p in db.vType3EntriesWithBO
+                //         where p.file_date >= dateFrom && p.entry_type == 3
+                //         && p.bond_number.Contains(singleBondToCheck)
+                //         select p).Take(1);
+                //}
 
-                if (singleBondToCheck != "")
+                logger.Info("Found " + asr.Count() + " AS Records");
+                foreach (AS_Record asRecord in asr.ToList())
                 {
-                    q = (from p in db.vType3EntriesWithBO
-                         where p.file_date >= dateFrom && p.entry_type == 3
-                         && p.bond_number.Contains(singleBondToCheck)
-                         select p).Take(1);
-                }
+                    //get the bond record for this
+                    var bor = from p in db.BO_Record where p.bond_number == asRecord.bond_number orderby p.file_date select p;
+                    BO_Record boRecord = bor.First();
 
-                logger.Info("Found " + q.Count() + " AS Records");
-                //For each record
-                foreach (vType3EntriesWithBO asr in q.ToList())
-                {
-                    logger.Info("Processing Bond Number " + asr.bond_number +
-                          ", Entry Number " + asr.entry_number1 +
-                          ", Entry Date " + asr.entry_date + ", Effective Date " +
-                          asr.bond_effective_date + ", Importer " +
-                          asr.importer_of_record + ", File date " + asr.file_date.ToShortDateString());
+                    logger.Info("Processing Bond Number " + asRecord.bond_number +
+                          ", Entry Number " + asRecord.entry_number1 +
+                          ", Entry Date " + asRecord.entry_date + ", Effective Date " +
+                          boRecord.bond_effective_date + ", Importer " +
+                          asRecord.importer_of_record + ", File date " + asRecord.file_date.ToShortDateString());
 
                     //See if there's already an email sent for it
                     var e = from p in db.ASAQEmails
                             where
-                                p.BondNumber == asr.bond_number
-                                && p.EntryDate == asr.entry_date
-                                && p.EffectiveDate == asr.bond_effective_date
-                                && p.Importer == asr.importer_of_record
-                                && p.EntryNumber == asr.entry_number1
-                                && (p.FileDate == asr.file_date || p.FileDate == null)
+                                p.BondNumber == asRecord.bond_number
+                                && p.EntryDate == asRecord.entry_date
+                                && p.EffectiveDate == boRecord.bond_effective_date
+                                && p.Importer == asRecord.importer_of_record
+                                && p.EntryNumber == asRecord.entry_number1
+                                && (p.FileDate == asRecord.file_date || p.FileDate == null)
                             select p;
                     if (e.Count() > 0)
                     {
-                        logger.Info("Email for Bond Number " + asr.bond_number +
-                          ", Entry Date " + asr.entry_date + ", Effective Date " +
-                            ", Entry Number " + asr.entry_number1 +
-                          asr.bond_effective_date + ", Importer " +
-                          asr.importer_of_record + ", File date " + asr.file_date.ToShortDateString() + " already sent.");
+                        logger.Info("Email for Bond Number " + asRecord.bond_number +
+                          ", Entry Date " + asRecord.entry_date + ", Effective Date " +
+                            ", Entry Number " + asRecord.entry_number1 +
+                          boRecord.bond_effective_date + ", Importer " +
+                          asRecord.importer_of_record + ", File date " + asRecord.file_date.ToShortDateString() + " already sent.");
                         continue;
                     }
 
                     //Create and send email
-                    logger.Info("Email for Bond Number " + asr.bond_number +
-                        ", Entry Date " + asr.entry_date + ", Effective Date " +
-                          ", Entry Number " + asr.entry_number1 +
-                        asr.bond_effective_date + ", Importer " +
-                        asr.importer_of_record + ", File date " + asr.file_date.ToShortDateString() + " has NOT BEEN sent.");
-                    //for now, we'll just write to the console
-                    logger.Info(asr.importer_of_record + " " + asr.entry_date.ToString());
+                    logger.Info("Email for Bond Number " + asRecord.bond_number +
+                        ", Entry Date " + asRecord.entry_date + ", Effective Date " +
+                          ", Entry Number " + asRecord.entry_number1 +
+                        boRecord.bond_effective_date + ", Importer " +
+                        asRecord.importer_of_record + ", File date " + 
+                        asRecord.file_date.ToShortDateString() + " has NOT BEEN sent.");
                     //logger.Info("Sendmail has been commented out!");
 
-                    sendMail(asr, simulateOnly);
+                    sendMail(asRecord, boRecord, simulateOnly);
 
                     if (!simulateOnly)
                     {
 
                         //Add "mail sent" record for this AS record
                         ASAQEmail asaq = new ASAQEmail();
-                        asaq.BondNumber = asr.bond_number;
-                        asaq.EntryDate = asr.entry_date;
-                        asaq.EffectiveDate = asr.bond_effective_date;
-                        asaq.Importer = asr.importer_of_record;
+                        asaq.BondNumber = asRecord.bond_number;
+                        asaq.EntryDate = asRecord.entry_date;
+                        asaq.EffectiveDate = boRecord.bond_effective_date;
+                        asaq.Importer = asRecord.importer_of_record;
                         asaq.EmailSentDate = DateTime.Now;
-                        asaq.EntryNumber = asr.entry_number1;
-                        asaq.FileDate = asr.file_date;
+                        asaq.EntryNumber = asRecord.entry_number1;
+                        asaq.FileDate = asRecord.file_date;
                         db.ASAQEmails.Add(asaq);
                         db.SaveChanges();
                     }
@@ -168,7 +171,7 @@ namespace EntryType3Email
             }
         }
 
-        private static void sendMail(vType3EntriesWithBO asr, bool simulateOnly)
+        private static void sendMail(AS_Record asRecord, BO_Record boRecord, bool simulateOnly)
         {
 
             body = "Importer of Record: <importer>\r\nCustom Bond Number: <bondnumber>\r\nBond Amount: <bondamount>\r\nEffective Date: <effectivedate>\r\nBond Type: <bondtype>\r\n";
@@ -179,33 +182,33 @@ namespace EntryType3Email
             body += "\r\n\r\n";
             body += "The Customs Bond Desk is required to review this entry detail with the Customs Broker \r\nand alert IFIC Underwriting for the possible need to collateralize the Custom Bond.";
 
-            bodyReplace("<importer>", asr.importer_of_record + " " + asr.importer_name);
-            bodyReplace("<bondnumber>", asr.bond_number);
-            bodyReplace("<bondamount>", String.Format("{0:C0}", asr.bond_liability_amount));
-            if (asr.bond_effective_date == null)
+            bodyReplace("<importer>", asRecord.importer_of_record + " " + boRecord.importer_name);
+            bodyReplace("<bondnumber>", asRecord.bond_number);
+            bodyReplace("<bondamount>", String.Format("{0:C0}", boRecord.bond_liability_amount));
+            if (boRecord.bond_effective_date == null)
             {
                 bodyReplace("<effectivedate>", "no effective date");
             }
             else
             {
-                bodyReplace("<effectivedate>", ((DateTime)asr.bond_effective_date).ToShortDateString());
+                bodyReplace("<effectivedate>", ((DateTime)boRecord.bond_effective_date).ToShortDateString());
             }
-            bodyReplace("<bondtype>", asr.bond_type.ToString() + " " + getBondType(asr.bond_type.ToString()));
-            bodyReplace("<suretycode>", asr.surety_code);
-            bodyReplace("<dateofentry>", ((DateTime)asr.entry_date).ToShortDateString());
-            bodyReplace("<filercode>", asr.filer_code1 + " " + getFilerCode(asr.filer_code1));
-            bodyReplace("<entrynumber>", asr.entry_number1);
-            bodyReplace("<entrytype>", asr.entry_type + " " + getEntryType(asr.entry_type.ToString()));
-            bodyReplace("<portofentry>", asr.district_port_of_entry1.ToString() + " " + getPortName(asr.district_port_of_entry1.ToString()));
-            bodyReplace("<value>", String.Format("{0:C0}", asr.value));
-            bodyReplace("<duty>", String.Format("{0:C}", asr.estimated_duty));
-            bodyReplace("<taxes>", String.Format("{0:C}", asr.estimated_taxes));
-            bodyReplace("<fees>", String.Format("{0:C}", asr.estimated_fee));
-            bodyReplace("<add>", String.Format("{0:C}", asr.estimated_antidumping_duty));
-            bodyReplace("<cvd>", String.Format("{0:C}", asr.estimated_countervailing_duty));
-            bodyReplace("<bondadd>", String.Format("{0:C}", asr.bonded_antidumping_duty));
-            bodyReplace("<bondcvd>", String.Format("{0:C}", asr.bonded_countervailing_duty));
-            bodyReplace("<filedate>", String.Format("{0:C}", asr.file_date.ToShortDateString()));
+            bodyReplace("<bondtype>", asRecord.bond_type.ToString() + " " + getBondType(asRecord.bond_type.ToString()));
+            bodyReplace("<suretycode>", asRecord.surety_code);
+            bodyReplace("<dateofentry>", ((DateTime)asRecord.entry_date).ToShortDateString());
+            bodyReplace("<filercode>", asRecord.filer_code1 + " " + getFilerCode(asRecord.filer_code1));
+            bodyReplace("<entrynumber>", asRecord.entry_number1);
+            bodyReplace("<entrytype>", asRecord.entry_type + " " + getEntryType(asRecord.entry_type.ToString()));
+            bodyReplace("<portofentry>", asRecord.district_port_of_entry1.ToString() + " " + getPortName(asRecord.district_port_of_entry1.ToString()));
+            bodyReplace("<value>", String.Format("{0:C0}", asRecord.value));
+            bodyReplace("<duty>", String.Format("{0:C}", asRecord.estimated_duty));
+            bodyReplace("<taxes>", String.Format("{0:C}", asRecord.estimated_taxes));
+            bodyReplace("<fees>", String.Format("{0:C}", asRecord.estimated_fee));
+            bodyReplace("<add>", String.Format("{0:C}", asRecord.estimated_antidumping_duty));
+            bodyReplace("<cvd>", String.Format("{0:C}", asRecord.estimated_countervailing_duty));
+            bodyReplace("<bondadd>", String.Format("{0:C}", asRecord.bonded_antidumping_duty));
+            bodyReplace("<bondcvd>", String.Format("{0:C}", asRecord.bonded_countervailing_duty));
+            bodyReplace("<filedate>", String.Format("{0:C}", asRecord.file_date.ToShortDateString()));
 
 
             if (!simulateOnly)
@@ -223,7 +226,8 @@ namespace EntryType3Email
                     msg.To.Add(s);
                 }
 
-                msg.Subject = "Alert: An ADD/CVD entry has been posted against a Custom Bond. Principal: " + asr.importer_name + " TIN: " + asr.importer_of_record + " Entry: " + asr.entry_number1;
+                msg.Subject = "Alert: An ADD/CVD entry has been posted against a Custom Bond. Principal: " + boRecord.importer_name + " TIN: " + 
+                    asRecord.importer_of_record + " Entry: " + asRecord.entry_number1;
                 msg.Body = body;
                 msg.BodyEncoding = System.Text.Encoding.UTF8;
                 msg.SubjectEncoding = System.Text.Encoding.UTF8;

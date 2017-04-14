@@ -130,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spGetType3Entries_Result.cs">
+      <DependentUpon>CBPMQDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="vType3EntriesWithBO.cs">
       <DependentUpon>CBPMQDBModel.tt</DependentUpon>
     </Compile>
