@@ -36,9 +36,11 @@ namespace EntryType3Email
                 DateTime dateFrom = DateTime.Now.AddDays(numDays * -1);
                 cbpmqdbEntities1 db = new cbpmqdbEntities1();
                 //Find AS records with an entry type of 3 
+                
 
-                var asr = from p in db.AS_Record where p.file_date >= dateFrom
+                var asr = from p in db.AS_Record.AsNoTracking() where p.file_date >= dateFrom
                           && p.entry_type==3
+                         
                           select p;
                 //if (singleBondToCheck != "")
                 //{
@@ -49,8 +51,10 @@ namespace EntryType3Email
                 //}
 
                 logger.Info("Found " + asr.Count() + " AS Records");
+                //for(int aC=0;aC<asr.Count();aC++)
                 foreach (AS_Record asRecord in asr.ToList())
                 {
+                //    AS_Record asRecord = asr.
                     //get the bond record for this
                     var bor = from p in db.BO_Record where p.bond_number == asRecord.bond_number orderby p.file_date select p;
                     BO_Record boRecord = bor.First();

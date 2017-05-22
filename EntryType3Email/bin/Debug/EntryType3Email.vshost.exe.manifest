@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eI/dKsxx/LV8FArJPd2/UlvKgBYuWTLY50g+AzO/AU8=</dsig:DigestValue>
+        <dsig:DigestValue>Zmx9wxcifdlyBoBAxFvRO+tqHozjrka/JKyGFckrzZs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,13 +107,13 @@
       <dsig:DigestValue>Y8MZXfGJcpcxY30ZKbtGVzuEuHgBckwNFccwP/iZTFs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="EntryType3Email.exe.config" size="2251">
+  <file name="EntryType3Email.exe.config" size="2250">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>G3ztVqSkABOy+JYLLbKa2lxNTahuhW/K5pZq4tL62vc=</dsig:DigestValue>
+      <dsig:DigestValue>5euS1Zwi/eIBMaVTPAP4GCNCLjN+jm+KCOP1FoP1FLg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="NLog.config" size="1810">
