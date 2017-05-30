@@ -16,3 +16,4 @@ D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.exe.manife
 D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.application
 D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.exe
 D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.pdb
+D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.csprojResolveAssemblyReference.cache

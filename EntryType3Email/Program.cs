@@ -56,17 +56,17 @@ namespace EntryType3Email
                 {
                 //    AS_Record asRecord = asr.
                     //get the bond record for this
-                    var bor = from p in db.BO_Record where p.bond_number == asRecord.bond_number orderby p.file_date select p;
+                    var bor = from p in db.BO_Record.AsNoTracking() where p.bond_number == asRecord.bond_number orderby p.file_date descending select p;
                     BO_Record boRecord = bor.First();
 
                     logger.Info("Processing Bond Number " + asRecord.bond_number +
                           ", Entry Number " + asRecord.entry_number1 +
                           ", Entry Date " + asRecord.entry_date + ", Effective Date " +
                           boRecord.bond_effective_date + ", Importer " +
-                          asRecord.importer_of_record + ", File date " + asRecord.file_date.ToShortDateString());
+                          asRecord.importer_of_record + " " + boRecord.importer_name + ", File date " + asRecord.file_date.ToShortDateString());
 
                     //See if there's already an email sent for it
-                    var e = from p in db.ASAQEmails
+                    var e = from p in db.ASAQEmails.AsNoTracking()
                             where
                                 p.BondNumber == asRecord.bond_number
                                 && p.EntryDate == asRecord.entry_date
