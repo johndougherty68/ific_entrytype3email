@@ -23,5 +23,6 @@ namespace EntryType3Email
         public Nullable<System.DateTime> EntryDate { get; set; }
         public Nullable<System.DateTime> FileDate { get; set; }
         public string EntryNumber { get; set; }
+        public string SentTo { get; set; }
     }
 }

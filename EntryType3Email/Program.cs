@@ -12,6 +12,7 @@ using System.ComponentModel;
 using NLog;
 using System.Xml.Linq;
 using System.IO;
+using System.Threading;
 
 namespace EntryType3Email
 {
@@ -40,7 +41,7 @@ namespace EntryType3Email
 
                 var asr = from p in db.AS_Record.AsNoTracking() where p.file_date >= dateFrom
                           && p.entry_type==3
-                         
+                          
                           select p;
                 //if (singleBondToCheck != "")
                 //{
@@ -94,6 +95,7 @@ namespace EntryType3Email
                         asRecord.file_date.ToShortDateString() + " has NOT BEEN sent.");
                     //logger.Info("Sendmail has been commented out!");
 
+                    Thread.Sleep(3000);
                     sendMail(asRecord, boRecord, simulateOnly);
 
                     if (!simulateOnly)
@@ -108,6 +110,7 @@ namespace EntryType3Email
                         asaq.EmailSentDate = DateTime.Now;
                         asaq.EntryNumber = asRecord.entry_number1;
                         asaq.FileDate = asRecord.file_date;
+                        asaq.SentTo = toEmails;
                         db.ASAQEmails.Add(asaq);
                         db.SaveChanges();
                     }

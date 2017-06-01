@@ -149,11 +149,12 @@ warning 6002: The table/view 'cbpmqdb.dbo.AS_Record' does not have a primary key
           <Property Name="Importer" Type="varchar" MaxLength="50" />
           <Property Name="BondNumber" Type="varchar" MaxLength="50" />
           <Property Name="EffectiveDate" Type="date" />
-          <Property Name="EmailSentDate" Type="date" />
+          <Property Name="EmailSentDate" Type="datetime" />
           <Property Name="Notes" Type="text" />
           <Property Name="EntryDate" Type="date" />
           <Property Name="FileDate" Type="date" />
           <Property Name="EntryNumber" Type="varchar" MaxLength="50" />
+          <Property Name="SentTo" Type="varchar" MaxLength="500" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'cbpmqdb.dbo.BO_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -559,11 +560,12 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
           <Property Name="Importer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="BondNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
-          <Property Name="EmailSentDate" Type="DateTime" Precision="0" />
+          <Property Name="EmailSentDate" Type="DateTime" Precision="3" />
           <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="EntryDate" Type="DateTime" Precision="0" />
           <Property Name="FileDate" Type="DateTime" Precision="0" />
           <Property Name="EntryNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SentTo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="BondType">
           <Key>
@@ -771,7 +773,7 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
           <EntitySet Name="PortCodes" EntityType="Self.PortCode" />
           <EntitySet Name="vType3EntriesWithBO" EntityType="cbpmqdbModel1.vType3EntriesWithBO" />
           <FunctionImport Name="spGetType3Entries" ReturnType="Collection(cbpmqdbModel1.spGetType3Entries_Result)">
-            <Parameter Name="fromDate" Mode="In" Type="DateTime" />
+          <Parameter Name="fromDate" Mode="In" Type="DateTime" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="vType3EntriesWithBO">
@@ -935,6 +937,7 @@ warning 6002: The table/view 'cbpmqdb.dbo.vType3EntriesWithBO' does not have a p
           <EntitySetMapping Name="ASAQEmails">
             <EntityTypeMapping TypeName="cbpmqdbModel1.ASAQEmail">
               <MappingFragment StoreEntitySet="ASAQEmails">
+                <ScalarProperty Name="SentTo" ColumnName="SentTo" />
                 <ScalarProperty Name="EmailID" ColumnName="EmailID" />
                 <ScalarProperty Name="Importer" ColumnName="Importer" />
                 <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />

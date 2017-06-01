@@ -4,6 +4,7 @@
     <EntitySetMapping Name="ASAQEmails">
       <EntityTypeMapping TypeName="cbpmqdbModel1.ASAQEmail">
         <MappingFragment StoreEntitySet="ASAQEmails">
+          <ScalarProperty Name="SentTo" ColumnName="SentTo" />
           <ScalarProperty Name="EmailID" ColumnName="EmailID" />
           <ScalarProperty Name="Importer" ColumnName="Importer" />
           <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />

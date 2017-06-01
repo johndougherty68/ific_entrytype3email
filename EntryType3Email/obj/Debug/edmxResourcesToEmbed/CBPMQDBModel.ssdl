@@ -144,11 +144,12 @@ warning 6002: The table/view 'cbpmqdb.dbo.AS_Record' does not have a primary key
     <Property Name="Importer" Type="varchar" MaxLength="50" />
     <Property Name="BondNumber" Type="varchar" MaxLength="50" />
     <Property Name="EffectiveDate" Type="date" />
-    <Property Name="EmailSentDate" Type="date" />
+    <Property Name="EmailSentDate" Type="datetime" />
     <Property Name="Notes" Type="text" />
     <Property Name="EntryDate" Type="date" />
     <Property Name="FileDate" Type="date" />
     <Property Name="EntryNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SentTo" Type="varchar" MaxLength="500" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'cbpmqdb.dbo.BO_Record' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
