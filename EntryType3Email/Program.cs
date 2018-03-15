@@ -41,6 +41,7 @@ namespace EntryType3Email
 
                 var asr = from p in db.AS_Record.AsNoTracking() where p.file_date >= dateFrom
                           && p.entry_type==3
+                          //&& p.importer_of_record=="59-266395400"
                           
                           select p;
                 //if (singleBondToCheck != "")
@@ -181,73 +182,81 @@ namespace EntryType3Email
         private static void sendMail(AS_Record asRecord, BO_Record boRecord, bool simulateOnly)
         {
 
-            body = "Importer of Record: <importer>\r\nCustom Bond Number: <bondnumber>\r\nBond Amount: <bondamount>\r\nEffective Date: <effectivedate>\r\nBond Type: <bondtype>\r\n";
-            body += "Surety Code: <suretycode>\r\nDate of Entry: <dateofentry>\r\nFiler Code: <filercode>\r\nEntry Number: <entrynumber>\r\nEntry Type: <entrytype>\r\n";
-            body += "District/Port of Entry: <portofentry>\r\nValue: <value>\r\nEstimated Duty: <duty>\r\nEstimated Taxes: <taxes>\r\nEstimated Fees: <fees>\r\nEstimated ADD: <add>\r\nEstmated CVD: <cvd>\r\n";
-            body += "Estimated Bonded ADD: <bondadd>\r\nEstmated Bonded CVD: <bondcvd>\r\n";
-            body += "File Date: <filedate>\r\n";
-            body += "\r\n\r\n";
-            body += "The Customs Bond Desk is required to review this entry detail with the Customs Broker \r\nand alert IFIC Underwriting for the possible need to collateralize the Custom Bond.";
-
-            bodyReplace("<importer>", asRecord.importer_of_record + " " + boRecord.importer_name);
-            bodyReplace("<bondnumber>", asRecord.bond_number);
-            bodyReplace("<bondamount>", String.Format("{0:C0}", boRecord.bond_liability_amount));
-            if (boRecord.bond_effective_date == null)
+            try
             {
-                bodyReplace("<effectivedate>", "no effective date");
-            }
-            else
-            {
-                bodyReplace("<effectivedate>", ((DateTime)boRecord.bond_effective_date).ToShortDateString());
-            }
-            bodyReplace("<bondtype>", asRecord.bond_type.ToString() + " " + getBondType(asRecord.bond_type.ToString()));
-            bodyReplace("<suretycode>", asRecord.surety_code);
-            bodyReplace("<dateofentry>", ((DateTime)asRecord.entry_date).ToShortDateString());
-            bodyReplace("<filercode>", asRecord.filer_code1 + " " + getFilerCode(asRecord.filer_code1));
-            bodyReplace("<entrynumber>", asRecord.entry_number1);
-            bodyReplace("<entrytype>", asRecord.entry_type + " " + getEntryType(asRecord.entry_type.ToString()));
-            bodyReplace("<portofentry>", asRecord.district_port_of_entry1.ToString() + " " + getPortName(asRecord.district_port_of_entry1.ToString()));
-            bodyReplace("<value>", String.Format("{0:C0}", asRecord.value));
-            bodyReplace("<duty>", String.Format("{0:C}", asRecord.estimated_duty));
-            bodyReplace("<taxes>", String.Format("{0:C}", asRecord.estimated_taxes));
-            bodyReplace("<fees>", String.Format("{0:C}", asRecord.estimated_fee));
-            bodyReplace("<add>", String.Format("{0:C}", asRecord.estimated_antidumping_duty));
-            bodyReplace("<cvd>", String.Format("{0:C}", asRecord.estimated_countervailing_duty));
-            bodyReplace("<bondadd>", String.Format("{0:C}", asRecord.bonded_antidumping_duty));
-            bodyReplace("<bondcvd>", String.Format("{0:C}", asRecord.bonded_countervailing_duty));
-            bodyReplace("<filedate>", String.Format("{0:C}", asRecord.file_date.ToShortDateString()));
+                body = "Importer of Record: <importer>\r\nCustom Bond Number: <bondnumber>\r\nBond Amount: <bondamount>\r\nEffective Date: <effectivedate>\r\nBond Type: <bondtype>\r\n";
+                body += "Surety Code: <suretycode>\r\nDate of Entry: <dateofentry>\r\nFiler Code: <filercode>\r\nEntry Number: <entrynumber>\r\nEntry Type: <entrytype>\r\n";
+                body += "District/Port of Entry: <portofentry>\r\nValue: <value>\r\nEstimated Duty: <duty>\r\nEstimated Taxes: <taxes>\r\nEstimated Fees: <fees>\r\nEstimated ADD: <add>\r\nEstmated CVD: <cvd>\r\n";
+                body += "Estimated Bonded ADD: <bondadd>\r\nEstmated Bonded CVD: <bondcvd>\r\n";
+                body += "File Date: <filedate>\r\n";
+                body += "\r\n\r\n";
+                body += "The Customs Bond Desk is required to review this entry detail with the Customs Broker \r\nand alert IFIC Underwriting for the possible need to collateralize the Custom Bond.";
 
-
-            if (!simulateOnly)
-            {
-                SmtpClient client = new SmtpClient(smtpServer);
-                var credArray = creds.Split('|');
-                client.Credentials = new NetworkCredential(credArray[0], credArray[1]);
-                client.UseDefaultCredentials = false;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                MailAddress from = new MailAddress(fromEmail);
-                MailMessage msg = new MailMessage();
-                msg.From = from;
-                foreach (string s in toEmails.Split(','))
+                bodyReplace("<importer>", asRecord.importer_of_record + " " + boRecord.importer_name);
+                bodyReplace("<bondnumber>", asRecord.bond_number);
+                bodyReplace("<bondamount>", String.Format("{0:C0}", boRecord.bond_liability_amount));
+                if (boRecord.bond_effective_date == null)
                 {
-                    msg.To.Add(s);
+                    bodyReplace("<effectivedate>", "no effective date");
                 }
+                else
+                {
+                    bodyReplace("<effectivedate>", ((DateTime)boRecord.bond_effective_date).ToShortDateString());
+                }
+                bodyReplace("<bondtype>", asRecord.bond_type.ToString() + " " + getBondType(asRecord.bond_type.ToString()));
+                bodyReplace("<suretycode>", asRecord.surety_code);
+                bodyReplace("<dateofentry>", ((DateTime)asRecord.entry_date).ToShortDateString());
+                bodyReplace("<filercode>", asRecord.filer_code1 + " " + getFilerCode(asRecord.filer_code1));
+                bodyReplace("<entrynumber>", asRecord.entry_number1);
+                bodyReplace("<entrytype>", asRecord.entry_type + " " + getEntryType(asRecord.entry_type.ToString()));
+                bodyReplace("<portofentry>", asRecord.district_port_of_entry1.ToString() + " " + getPortName(asRecord.district_port_of_entry1.ToString()));
+                bodyReplace("<value>", String.Format("{0:C0}", asRecord.value));
+                bodyReplace("<duty>", String.Format("{0:C}", asRecord.estimated_duty));
+                bodyReplace("<taxes>", String.Format("{0:C}", asRecord.estimated_taxes));
+                bodyReplace("<fees>", String.Format("{0:C}", asRecord.estimated_fee));
+                bodyReplace("<add>", String.Format("{0:C}", asRecord.estimated_antidumping_duty));
+                bodyReplace("<cvd>", String.Format("{0:C}", asRecord.estimated_countervailing_duty));
+                bodyReplace("<bondadd>", String.Format("{0:C}", asRecord.bonded_antidumping_duty));
+                bodyReplace("<bondcvd>", String.Format("{0:C}", asRecord.bonded_countervailing_duty));
+                bodyReplace("<filedate>", String.Format("{0:C}", asRecord.file_date.ToShortDateString()));
 
-                msg.Subject = "Alert: An ADD/CVD entry has been posted against a Custom Bond. Principal: " + boRecord.importer_name + " TIN: " + 
-                    asRecord.importer_of_record + " Entry: " + asRecord.entry_number1;
-                msg.Body = body;
-                msg.BodyEncoding = System.Text.Encoding.UTF8;
-                msg.SubjectEncoding = System.Text.Encoding.UTF8;
-                client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
-                string userState = "type 3 message";
-                logger.Info("Sending message:");
-                logger.Info(body);
-                client.SendAsync(msg, userState);
+
+                if (!simulateOnly)
+                {
+                    SmtpClient client = new SmtpClient(smtpServer);
+                    var credArray = creds.Split('|');
+                    client.Credentials = new NetworkCredential(credArray[0], credArray[1]);
+                    client.UseDefaultCredentials = false;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    MailAddress from = new MailAddress(fromEmail);
+                    MailMessage msg = new MailMessage();
+                    msg.From = from;
+                    foreach (string s in toEmails.Split(','))
+                    {
+                        msg.To.Add(s);
+                    }
+
+                    msg.Subject = "Alert: An ADD/CVD entry has been posted against a Custom Bond. Principal: " + boRecord.importer_name + " TIN: " +
+                        asRecord.importer_of_record + " Entry: " + asRecord.entry_number1;
+                    msg.Body = body;
+                    msg.BodyEncoding = System.Text.Encoding.UTF8;
+                    msg.SubjectEncoding = System.Text.Encoding.UTF8;
+                    client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
+                    string userState = "type 3 message";
+                    logger.Info("Sending message:");
+                    logger.Info(body);
+                    client.SendAsync(msg, userState);
+                }
+                else
+                {
+                    logger.Info("simulateOnly is TRUE. Not sending email, only logging what WOULD be sent.");
+                    logger.Info(body);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                logger.Info("simulateOnly is TRUE. Not sending email, only logging what WOULD be sent.");
-                logger.Info(body);
+                logger.Error("Sendmail: " + asRecord.importer_of_record + " " + boRecord.importer_name + " " + asRecord.entry_number1 + "  " + ex.Message);
+                return;
             }
 
         }

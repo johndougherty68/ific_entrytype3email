@@ -1,3 +1,5 @@
+D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.exe
+D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.pdb
 D:\projects\EntryType3Email\EntryType3Email\bin\Debug\App.config
 D:\projects\EntryType3Email\EntryType3Email\bin\Debug\NLog.config
 D:\projects\EntryType3Email\EntryType3Email\bin\Debug\NLog.xsd
@@ -12,8 +14,5 @@ D:\projects\EntryType3Email\EntryType3Email\bin\Debug\NLog.dll
 D:\projects\EntryType3Email\EntryType3Email\bin\Debug\EntityFramework.xml
 D:\projects\EntryType3Email\EntryType3Email\bin\Debug\EntityFramework.SqlServer.xml
 D:\projects\EntryType3Email\EntryType3Email\bin\Debug\NLog.xml
-D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.csprojResolveAssemblyReference.cache
 D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.exe.manifest
 D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.application
-D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.exe
-D:\projects\EntryType3Email\EntryType3Email\obj\Debug\EntryType3Email.pdb
